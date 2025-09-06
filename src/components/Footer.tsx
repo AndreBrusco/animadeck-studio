@@ -47,38 +47,6 @@ const Footer = () => {
               </div>
             </div>
 
-            {/* Game Links */}
-            <div>
-              <h4 className="font-semibold text-foreground mb-4">Jogo</h4>
-              <ul className="space-y-3">
-                <li>
-                  <a href="#download" className="text-muted-foreground hover:text-primary transition-colors">
-                    Download
-                  </a>
-                </li>
-                <li>
-                  <a href="#features" className="text-muted-foreground hover:text-primary transition-colors">
-                    Recursos
-                  </a>
-                </li>
-                <li>
-                  <a href="#gallery" className="text-muted-foreground hover:text-primary transition-colors">
-                    Capturas de Tela
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                    Requisitos do Sistema
-                  </a>
-                </li>
-                <li>
-                  <a href="#" className="text-muted-foreground hover:text-primary transition-colors">
-                    Log de Alterações
-                  </a>
-                </li>
-              </ul>
-            </div>
-
             {/* Support Links */}
             <div>
               <h4 className="font-semibold text-foreground mb-4">Suporte</h4>
@@ -136,27 +104,6 @@ const Footer = () => {
           </div>
         </div>
 
-        {/* Download CTA */}
-        <div className="bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl p-8 mb-8 border border-primary/20">
-          <div className="text-center">
-            <h3 className="text-2xl font-bold text-foreground mb-4">
-              Pronto para Começar Sua Aventura Política?
-            </h3>
-            <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-              Baixe o Capi Senador agora e embarque em uma jornada educacional pela
-              política brasileira. É grátis para jogar!
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="gaming-gradient text-lg px-8">
-                <Gamepad2 className="w-5 h-5 mr-2" />
-                Download Grátis
-              </Button>
-              <Button variant="outline" size="lg" className="text-lg px-8">
-                Ver Requisitos do Sistema
-              </Button>
-            </div>
-          </div>
-        </div>
       </div>
     </footer>
   );

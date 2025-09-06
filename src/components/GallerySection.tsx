@@ -153,27 +153,6 @@ const GallerySection = () => {
           </Card>
         </div>
 
-        {/* Call to Action */}
-        <div className="text-center mt-16">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            Quer Ver Mais?
-          </h3>
-          <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Siga nossa jornada de desenvolvimento nas redes sociais para as últimas atualizações,
-            conteúdo dos bastidores e prévias exclusivas.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button variant="outline" size="lg">
-              Seguir no Twitter
-            </Button>
-            <Button variant="outline" size="lg">
-              Entrar no Discord
-            </Button>
-            <Button size="lg" className="gaming-gradient">
-              Download Kit de Imprensa
-            </Button>
-          </div>
-        </div>
       </div>
     </section>
   );
