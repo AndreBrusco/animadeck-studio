@@ -92,15 +92,15 @@ const HeroSection = () => {
             </div>
           </div>
 
-           {/* Bottom Action Button */}
-           <div className="mt-6 text-center">
-             <Button size="lg" className="bg-white text-primary hover:bg-blue-50 text-xl px-10 py-4" asChild>
-               <a href="/play">
-                 <Gamepad2 className="w-6 h-6 mr-3" />
-                 Jogar Agora
-               </a>
-             </Button>
-           </div>
+          {/* Bottom Action Button */}
+          <div className="mt-6 text-center">
+            <Button size="lg" className="bg-white text-primary hover:bg-blue-50 text-xl px-10 py-4" asChild>
+              <a href="/play">
+                <Gamepad2 className="w-6 h-6 mr-3" />
+                Jogar Agora
+              </a>
+            </Button>
+          </div>
         </div>
       </div>
 
