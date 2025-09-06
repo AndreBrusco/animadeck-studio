@@ -44,13 +44,13 @@ const HeroSection = () => {
             <div className="flex justify-center lg:justify-start space-x-6 mb-8">
               <div className="text-center">
                 <div className="flex items-center text-yellow-400 mb-1">
-                  <Star className="w-5 h-5 fill-current mr-1" />
-                  <span className="font-bold text-white">4.8</span>
+                  <Star className="w-8 h-8 fill-current mr-1" />
+                  <span className="font-bold text-white text-xl ml-4">5 / 5</span>
                 </div>
                 <p className="text-sm text-blue-200">Avaliação dos Jogadores</p>
               </div>
               <div className="text-center">
-                <p className="font-bold text-2xl text-white">10+</p>
+                <p className="font-bold text-2xl text-white">6+</p>
                 <p className="text-sm text-blue-200">Níveis</p>
               </div>
               <div className="text-center">
@@ -62,13 +62,10 @@ const HeroSection = () => {
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
               <Button size="lg" className="bg-white text-primary hover:bg-blue-50 text-lg px-8">
-                <Download className="w-5 h-5 mr-2" />
-                Download Grátis
-              </Button>
-              <Button variant="outline" size="lg" className="border-white text-white hover:bg-white hover:text-primary text-lg px-8">
                 <Play className="w-5 h-5 mr-2" />
                 Ver Trailer
               </Button>
+
             </div>
           </div>
 

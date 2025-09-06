@@ -83,8 +83,8 @@ const AboutSection = () => {
         </div>
 
         {/* Game Highlights */}
-        <div className="bg-card rounded-2xl p-8 border border-border">
-          <h3 className="text-2xl font-bold text-center text-foreground mb-8">
+        <div className="bg-gradient-to-br from-blue-100 to-navy-600 rounded-2xl p-8 border border-blue-200">
+          <h3 className="text-2xl font-bold text-center text-black mb-8">
             Destaques do Jogo
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
