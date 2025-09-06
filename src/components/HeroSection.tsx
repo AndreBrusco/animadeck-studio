@@ -45,7 +45,7 @@ const HeroSection = () => {
               <div className="text-center">
                 <div className="flex items-center text-yellow-400 mb-1">
                   <Star className="w-8 h-8 fill-current mr-1" />
-                  <span className="font-bold text-white text-xl ml-4">5 / 5</span>
+                  <span className="font-bold text-white text-xl ml-4">10 de 10</span>
                 </div>
                 <p className="text-sm text-blue-200">Avaliação dos Jogadores</p>
               </div>
@@ -92,13 +92,15 @@ const HeroSection = () => {
             </div>
           </div>
 
-          {/* Bottom Action Button */}
-          <div className="mt-6 text-center">
-            <Button size="lg" className="bg-white text-primary hover:bg-blue-50 text-xl px-10 py-4">
-              <Gamepad2 className="w-6 h-6 mr-3" />
-              Jogar Agora
-            </Button>
-          </div>
+           {/* Bottom Action Button */}
+           <div className="mt-6 text-center">
+             <Button size="lg" className="bg-white text-primary hover:bg-blue-50 text-xl px-10 py-4" asChild>
+               <a href="/play">
+                 <Gamepad2 className="w-6 h-6 mr-3" />
+                 Jogar Agora
+               </a>
+             </Button>
+           </div>
         </div>
       </div>
 

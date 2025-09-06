@@ -48,9 +48,11 @@ const Header = () => {
                 Ver Trailer
               </a>
             </Button>
-            <Button size="sm" className="gaming-gradient">
-              <Download className="w-4 h-4 mr-2" />
-              Jogar Agora
+            <Button size="sm" className="gaming-gradient" asChild>
+              <a href="/play">
+                <Download className="w-4 h-4 mr-2" />
+                Jogar Agora
+              </a>
             </Button>
             <Button variant="outline" size="icon" className="md:hidden">
               <Menu className="w-4 h-4" />
