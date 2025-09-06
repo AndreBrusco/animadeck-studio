@@ -61,9 +61,11 @@ const HeroSection = () => {
 
             {/* Action Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
-              <Button size="lg" className="bg-white text-primary hover:bg-blue-50 text-lg px-8">
-                <Play className="w-5 h-5 mr-2" />
-                Ver Trailer
+              <Button size="lg" className="bg-white text-primary hover:bg-blue-50 text-lg px-8" asChild>
+                <a href="#trailer">
+                  <Play className="w-5 h-5 mr-2" />
+                  Ver Trailer
+                </a>
               </Button>
 
             </div>
@@ -88,6 +90,14 @@ const HeroSection = () => {
             <div className="absolute -bottom-4 -left-4 bg-primary rounded-full p-3 retro-shadow">
               <Gamepad2 className="w-6 h-6 text-white" />
             </div>
+          </div>
+
+          {/* Bottom Action Button */}
+          <div className="mt-6 text-center">
+            <Button size="lg" className="bg-white text-primary hover:bg-blue-50 text-xl px-10 py-4">
+              <Gamepad2 className="w-6 h-6 mr-3" />
+              Jogar Agora
+            </Button>
           </div>
         </div>
       </div>

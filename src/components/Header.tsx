@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { GamepadIcon, Menu, Download, Play } from "lucide-react";
+import { Menu, Download, Play } from "lucide-react";
 
 const Header = () => {
   return (
@@ -8,8 +8,12 @@ const Header = () => {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className="flex items-center space-x-3">
-            <div className="w-10 h-10 bg-primary rounded-lg flex items-center justify-center">
-              <GamepadIcon className="w-6 h-6 text-primary-foreground" />
+            <div className="w-12 h-12 rounded-lg overflow-hidden">
+              <img
+                src="/run_capi.png"
+                alt="Capi Senador Logo"
+                className="w-full h-full object-cover"
+              />
             </div>
             <div>
               <h1 className="text-xl font-bold text-foreground">Capi Senador</h1>
@@ -18,29 +22,31 @@ const Header = () => {
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex items-center space-x-8">
-            <a href="#home" className="text-foreground hover:text-primary transition-colors">
+          <nav className="hidden md:flex items-center space-x-2">
+            <a href="#home" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-md hover:shadow-primary/10">
               Início
             </a>
-            <a href="#about" className="text-foreground hover:text-primary transition-colors">
+            <a href="#about" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-md hover:shadow-primary/10">
               Sobre
             </a>
-            <a href="#features" className="text-foreground hover:text-primary transition-colors">
+            <a href="#features" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-md hover:shadow-primary/10">
               Recursos
             </a>
-            <a href="#gallery" className="text-foreground hover:text-primary transition-colors">
+            <a href="#gallery" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-md hover:shadow-primary/10">
               Galeria
             </a>
-            <a href="#download" className="text-foreground hover:text-primary transition-colors">
-              Download
+            <a href="#agradecimentos" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-md hover:shadow-primary/10">
+              Agradecimentos
             </a>
           </nav>
 
           {/* Action Buttons */}
           <div className="flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="hidden sm:flex">
-              <Play className="w-4 h-4 mr-2" />
-              Ver Trailer
+            <Button variant="outline" size="sm" className="hidden sm:flex" asChild>
+              <a href="#trailer">
+                <Play className="w-4 h-4 mr-2" />
+                Ver Trailer
+              </a>
             </Button>
             <Button size="sm" className="gaming-gradient">
               <Download className="w-4 h-4 mr-2" />

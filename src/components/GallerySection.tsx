@@ -134,20 +134,24 @@ const GallerySection = () => {
         </div>
 
         {/* Video Spotlight */}
-        <div className="mt-16">
+        <div id="trailer" className="mt-16">
           <Card className="max-w-4xl mx-auto overflow-hidden">
             <CardContent className="p-0">
-              <div className="relative aspect-video bg-gradient-to-br from-primary/30 to-accent/30 flex items-center justify-center">
-                <div className="text-center text-white">
-                  <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-white/30 transition-colors cursor-pointer">
-                    <Play className="w-8 h-8 text-white ml-1" />
-                  </div>
-                  <h3 className="text-2xl font-bold mb-2">Trailer Oficial do Jogo</h3>
-                  <p className="text-white/80">
-                    Assista à experiência completa de jogabilidade em nosso trailer oficial
+              <div className="relative aspect-video bg-black rounded-lg overflow-hidden">
+                <video
+                  className="w-full h-full object-cover"
+                  controls
+                  poster="/trailer-poster.jpg"
+                  preload="metadata"
+                >
+                  <source src="/trailer.mp4" type="video/mp4" />
+                  <source src="/trailer.webm" type="video/webm" />
+                  <p className="text-white text-center p-8">
+                    Seu navegador não suporta vídeos HTML5.
+                    <a href="/trailer.mp4" className="text-blue-400 underline">Clique aqui para baixar o vídeo</a>
                   </p>
-                </div>
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
+                </video>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
               </div>
             </CardContent>
           </Card>
