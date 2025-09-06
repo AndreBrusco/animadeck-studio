@@ -8,33 +8,33 @@ const AboutSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            About the Game
+            Sobre o Jogo
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            A Political Adventure Like No Other
+            Uma Aventura Política Como Nenhuma Outra
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Step into the pixelated world of Brazilian politics with Capi Senador, 
-            where every decision matters and legislative secrets await discovery.
+            Entre no mundo pixelado da política brasileira com Capi Senador,
+            onde cada decisão importa e segredos legislativos aguardam descoberta.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-2 gap-12 items-center mb-16">
           <div>
             <h3 className="text-3xl font-bold text-foreground mb-6">
-              The Story Behind the Game
+              A História Por Trás do Jogo
             </h3>
             <div className="space-y-4">
               <p className="text-muted-foreground leading-relaxed">
-                Navigate through the complex world of Brazilian politics as Capi Senador, 
-                a determined character on a mission to uncover the truth behind legislative 
-                mysteries. This retro-inspired game combines classic platformer mechanics 
-                with educational political content.
+                Navegue pelo complexo mundo da política brasileira como Capi Senador,
+                um personagem determinado em uma missão para descobrir a verdade por trás dos
+                mistérios legislativos. Este jogo inspirado no retro combina mecânicas clássicas
+                de plataforma com conteúdo político educacional.
               </p>
               <p className="text-muted-foreground leading-relaxed">
-                Featuring beautiful pixel art inspired by classic Mario games, immersive 
-                gameplay, and authentic Brazilian political scenarios, this game offers 
-                both entertainment and education.
+                Com arte pixelada linda inspirada nos clássicos jogos do Mario, jogabilidade
+                imersiva e cenários políticos brasileiros autênticos, este jogo oferece
+                tanto entretenimento quanto educação.
               </p>
             </div>
           </div>
@@ -43,9 +43,9 @@ const AboutSection = () => {
             <Card className="gaming-card p-6 text-center">
               <CardContent className="p-0">
                 <MapPin className="w-8 h-8 text-primary mx-auto mb-3" />
-                <h4 className="font-bold text-foreground mb-2">Brazilian Setting</h4>
+                <h4 className="font-bold text-foreground mb-2">Ambiente Brasileiro</h4>
                 <p className="text-sm text-muted-foreground">
-                  Authentic political environments
+                  Ambientes políticos autênticos
                 </p>
               </CardContent>
             </Card>
@@ -53,9 +53,9 @@ const AboutSection = () => {
             <Card className="gaming-card p-6 text-center">
               <CardContent className="p-0">
                 <Users className="w-8 h-8 text-primary mx-auto mb-3" />
-                <h4 className="font-bold text-foreground mb-2">Educational</h4>
+                <h4 className="font-bold text-foreground mb-2">Educativo</h4>
                 <p className="text-sm text-muted-foreground">
-                  Learn about politics while playing
+                  Aprenda sobre política enquanto joga
                 </p>
               </CardContent>
             </Card>
@@ -63,9 +63,9 @@ const AboutSection = () => {
             <Card className="gaming-card p-6 text-center">
               <CardContent className="p-0">
                 <Trophy className="w-8 h-8 text-primary mx-auto mb-3" />
-                <h4 className="font-bold text-foreground mb-2">Achievements</h4>
+                <h4 className="font-bold text-foreground mb-2">Conquistas</h4>
                 <p className="text-sm text-muted-foreground">
-                  Unlock political milestones
+                  Desbloqueie marcos políticos
                 </p>
               </CardContent>
             </Card>
@@ -73,9 +73,9 @@ const AboutSection = () => {
             <Card className="gaming-card p-6 text-center">
               <CardContent className="p-0">
                 <Clock className="w-8 h-8 text-primary mx-auto mb-3" />
-                <h4 className="font-bold text-foreground mb-2">Retro Style</h4>
+                <h4 className="font-bold text-foreground mb-2">Estilo Retro</h4>
                 <p className="text-sm text-muted-foreground">
-                  Classic pixel art aesthetics
+                  Estética clássica de arte pixelada
                 </p>
               </CardContent>
             </Card>
@@ -85,16 +85,16 @@ const AboutSection = () => {
         {/* Game Highlights */}
         <div className="bg-card rounded-2xl p-8 border border-border">
           <h3 className="text-2xl font-bold text-center text-foreground mb-8">
-            Game Highlights
+            Destaques do Jogo
           </h3>
           <div className="grid md:grid-cols-3 gap-8">
             <div className="text-center">
               <div className="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-primary-foreground pixel-font">🏛️</span>
               </div>
-              <h4 className="font-bold text-foreground mb-2">Authentic Locations</h4>
+              <h4 className="font-bold text-foreground mb-2">Locais Autênticos</h4>
               <p className="text-muted-foreground text-sm">
-                Explore detailed pixel art versions of real Brazilian political buildings
+                Explore versões detalhadas em arte pixelada de prédios políticos brasileiros reais
               </p>
             </div>
 
@@ -102,9 +102,9 @@ const AboutSection = () => {
               <div className="w-16 h-16 bg-accent rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-accent-foreground pixel-font">🎯</span>
               </div>
-              <h4 className="font-bold text-foreground mb-2">Engaging Missions</h4>
+              <h4 className="font-bold text-foreground mb-2">Missões Engajantes</h4>
               <p className="text-muted-foreground text-sm">
-                Complete challenging tasks that mirror real political processes
+                Complete tarefas desafiadoras que espelham processos políticos reais
               </p>
             </div>
 
@@ -112,9 +112,9 @@ const AboutSection = () => {
               <div className="w-16 h-16 bg-secondary rounded-full flex items-center justify-center mx-auto mb-4">
                 <span className="text-2xl text-secondary-foreground pixel-font">📚</span>
               </div>
-              <h4 className="font-bold text-foreground mb-2">Learn & Play</h4>
+              <h4 className="font-bold text-foreground mb-2">Aprenda & Jogue</h4>
               <p className="text-muted-foreground text-sm">
-                Educational content seamlessly integrated into gameplay
+                Conteúdo educacional perfeitamente integrado à jogabilidade
               </p>
             </div>
           </div>

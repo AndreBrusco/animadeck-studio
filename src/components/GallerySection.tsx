@@ -9,57 +9,57 @@ const GallerySection = () => {
   const galleryItems = [
     {
       type: "screenshot",
-      title: "Congress Building Level",
-      description: "Navigate through the iconic Brazilian Congress building",
-      category: "Gameplay"
+      title: "Nível do Congresso Nacional",
+      description: "Navegue pelo icônico prédio do Congresso Nacional brasileiro",
+      category: "Jogabilidade"
     },
     {
       type: "screenshot",
-      title: "Character Selection",
-      description: "Choose your political adventure style",
+      title: "Seleção de Personagem",
+      description: "Escolha seu estilo de aventura política",
       category: "UI/UX"
     },
     {
       type: "video",
-      title: "Gameplay Trailer",
-      description: "Watch Capi Senador in action",
-      category: "Video"
+      title: "Trailer de Jogabilidade",
+      description: "Veja o Capi Senador em ação",
+      category: "Vídeo"
     },
     {
       type: "screenshot",
-      title: "Political Challenges",
-      description: "Solve complex legislative puzzles",
-      category: "Gameplay"
+      title: "Desafios Políticos",
+      description: "Resolva quebra-cabeças legislativos complexos",
+      category: "Jogabilidade"
     },
     {
       type: "screenshot",
-      title: "Brazilian Landmarks",
-      description: "Explore pixelated versions of famous locations",
-      category: "Environment"
+      title: "Marco Históricos Brasileiros",
+      description: "Explore versões pixeladas de locais famosos",
+      category: "Ambiente"
     },
     {
       type: "video",
-      title: "Developer Interview",
-      description: "Behind the scenes with the development team",
-      category: "Video"
+      title: "Entrevista com Desenvolvedores",
+      description: "Bastidores com a equipe de desenvolvimento",
+      category: "Vídeo"
     }
   ];
 
-  const categories = ["All", "Gameplay", "UI/UX", "Environment", "Video"];
+  const categories = ["Todos", "Jogabilidade", "UI/UX", "Ambiente", "Vídeo"];
 
   return (
     <section id="gallery" className="py-20 bg-muted/30">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            Gallery & Media
+            Galeria e Mídia
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            See the Game in Action
+            Veja o Jogo em Ação
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Explore screenshots, videos, and behind-the-scenes content from 
-            Capi Senador's development journey.
+            Explore capturas de tela, vídeos e conteúdo dos bastidores da
+            jornada de desenvolvimento do Capi Senador.
           </p>
         </div>
 
@@ -68,7 +68,7 @@ const GallerySection = () => {
           {categories.map((category) => (
             <Button
               key={category}
-              variant={category === "All" ? "default" : "outline"}
+              variant={category === "Todos" ? "default" : "outline"}
               size="sm"
               className="rounded-full"
             >
@@ -94,27 +94,27 @@ const GallerySection = () => {
                             <ImageIcon className="w-12 h-12 text-primary mb-2 mx-auto" />
                           )}
                           <p className="text-sm text-muted-foreground pixel-font">
-                            {item.type === "video" ? "Video Content" : "Screenshot"}
+                            {item.type === "video" ? "Conteúdo de Vídeo" : "Captura de Tela"}
                           </p>
                         </div>
-                        
+
                         {/* Overlay */}
                         <div className="absolute inset-0 bg-black/0 group-hover:bg-black/40 transition-colors flex items-center justify-center opacity-0 group-hover:opacity-100">
                           <Button size="sm" className="bg-white text-primary hover:bg-blue-50">
                             <Maximize2 className="w-4 h-4 mr-2" />
-                            View Full
+                            Ver Completo
                           </Button>
                         </div>
 
                         {/* Category Badge */}
-                        <Badge 
-                          variant="secondary" 
+                        <Badge
+                          variant="secondary"
                           className="absolute top-3 left-3 text-xs"
                         >
                           {item.category}
                         </Badge>
                       </div>
-                      
+
                       <div className="p-4">
                         <h3 className="font-semibold text-foreground mb-2">
                           {item.title}
@@ -142,9 +142,9 @@ const GallerySection = () => {
                   <div className="w-20 h-20 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4 hover:bg-white/30 transition-colors cursor-pointer">
                     <Play className="w-8 h-8 text-white ml-1" />
                   </div>
-                  <h3 className="text-2xl font-bold mb-2">Official Game Trailer</h3>
+                  <h3 className="text-2xl font-bold mb-2">Trailer Oficial do Jogo</h3>
                   <p className="text-white/80">
-                    Watch the complete gameplay experience in our official trailer
+                    Assista à experiência completa de jogabilidade em nosso trailer oficial
                   </p>
                 </div>
                 <div className="absolute inset-0 bg-gradient-to-t from-primary/50 to-transparent"></div>
@@ -156,21 +156,21 @@ const GallerySection = () => {
         {/* Call to Action */}
         <div className="text-center mt-16">
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            Want to See More?
+            Quer Ver Mais?
           </h3>
           <p className="text-muted-foreground mb-6 max-w-2xl mx-auto">
-            Follow our development journey on social media for the latest updates, 
-            behind-the-scenes content, and exclusive previews.
+            Siga nossa jornada de desenvolvimento nas redes sociais para as últimas atualizações,
+            conteúdo dos bastidores e prévias exclusivas.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button variant="outline" size="lg">
-              Follow on Twitter
+              Seguir no Twitter
             </Button>
             <Button variant="outline" size="lg">
-              Join Discord
+              Entrar no Discord
             </Button>
             <Button size="lg" className="gaming-gradient">
-              Download Press Kit
+              Download Kit de Imprensa
             </Button>
           </div>
         </div>

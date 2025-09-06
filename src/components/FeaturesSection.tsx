@@ -1,12 +1,12 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { 
-  Gamepad2, 
-  Palette, 
-  Globe, 
-  BookOpen, 
-  Zap, 
+import {
+  Gamepad2,
+  Palette,
+  Globe,
+  BookOpen,
+  Zap,
   Heart,
   ChevronRight
 } from "lucide-react";
@@ -15,39 +15,39 @@ const FeaturesSection = () => {
   const features = [
     {
       icon: <Gamepad2 className="w-8 h-8 text-primary" />,
-      title: "Classic Gameplay",
-      description: "Experience Mario-inspired platformer mechanics with smooth controls and responsive gameplay.",
-      highlight: "Retro Gaming"
+      title: "Jogabilidade Clássica",
+      description: "Experimente mecânicas de plataforma inspiradas no Mario com controles suaves e jogabilidade responsiva.",
+      highlight: "Jogos Retro"
     },
     {
       icon: <Palette className="w-8 h-8 text-primary" />,
-      title: "Pixel Art Mastery",
-      description: "Beautiful hand-crafted pixel art that brings Brazilian political scenarios to life.",
-      highlight: "Visual Excellence"
+      title: "Maestria em Pixel Art",
+      description: "Arte pixelada linda feita à mão que traz cenários políticos brasileiros à vida.",
+      highlight: "Excelência Visual"
     },
     {
       icon: <Globe className="w-8 h-8 text-primary" />,
-      title: "Brazilian Culture",
-      description: "Immerse yourself in authentic Brazilian political culture and landmarks.",
-      highlight: "Cultural Learning"
+      title: "Cultura Brasileira",
+      description: "Mergulhe na cultura política brasileira autêntica e marcos históricos.",
+      highlight: "Aprendizado Cultural"
     },
     {
       icon: <BookOpen className="w-8 h-8 text-primary" />,
-      title: "Educational Content",
-      description: "Learn about legislative processes while having fun in this unique gaming experience.",
-      highlight: "Learn & Play"
+      title: "Conteúdo Educacional",
+      description: "Aprenda sobre processos legislativos enquanto se diverte nesta experiência única de jogo.",
+      highlight: "Aprenda & Jogue"
     },
     {
       icon: <Zap className="w-8 h-8 text-primary" />,
-      title: "Dynamic Challenges",
-      description: "Face increasingly complex political scenarios that test your strategic thinking.",
-      highlight: "Strategic Gameplay"
+      title: "Desafios Dinâmicos",
+      description: "Enfrente cenários políticos cada vez mais complexos que testam seu pensamento estratégico.",
+      highlight: "Jogabilidade Estratégica"
     },
     {
       icon: <Heart className="w-8 h-8 text-primary" />,
-      title: "Made with Love",
-      description: "Crafted with passion for both gaming and political education by Brazilian developers.",
-      highlight: "Indie Spirit"
+      title: "Feito com Amor",
+      description: "Criado com paixão tanto por jogos quanto por educação política por desenvolvedores brasileiros.",
+      highlight: "Espírito Indie"
     }
   ];
 
@@ -56,14 +56,14 @@ const FeaturesSection = () => {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <Badge variant="secondary" className="mb-4">
-            Game Features
+            Recursos do Jogo
           </Badge>
           <h2 className="text-4xl lg:text-5xl font-bold text-foreground mb-6">
-            Why Players Love Capi Senador
+            Por Que os Jogadores Amam o Capi Senador
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
-            Discover what makes this political adventure game a unique and engaging experience 
-            for players of all ages.
+            Descubra o que torna este jogo de aventura política uma experiência única e envolvente
+            para jogadores de todas as idades.
           </p>
         </div>
 
@@ -87,12 +87,12 @@ const FeaturesSection = () => {
                 <p className="text-muted-foreground leading-relaxed">
                   {feature.description}
                 </p>
-                <Button 
-                  variant="ghost" 
-                  size="sm" 
+                <Button
+                  variant="ghost"
+                  size="sm"
                   className="mt-4 p-0 h-auto text-primary hover:text-primary/80 group-hover:translate-x-1 transition-transform"
                 >
-                  Learn more
+                  Saiba mais
                   <ChevronRight className="w-4 h-4 ml-1" />
                 </Button>
               </CardContent>
@@ -105,42 +105,42 @@ const FeaturesSection = () => {
           <div className="grid lg:grid-cols-2 gap-8 items-center">
             <div>
               <Badge className="mb-4 bg-primary text-primary-foreground">
-                🏆 Award-Winning Design
+                🏆 Design Premiado
               </Badge>
               <h3 className="text-3xl font-bold text-foreground mb-4">
-                Immersive Political Adventure
+                Aventura Política Imersiva
               </h3>
               <p className="text-muted-foreground text-lg mb-6 leading-relaxed">
-                Experience the perfect blend of entertainment and education. Our game 
-                has been recognized for its innovative approach to political education 
-                through gaming, making complex topics accessible and fun.
+                Experimente a mistura perfeita de entretenimento e educação. Nosso jogo
+                foi reconhecido por sua abordagem inovadora à educação política
+                através de jogos, tornando tópicos complexos acessíveis e divertidos.
               </p>
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">10+ Unique Levels</span>
+                  <span className="text-sm text-muted-foreground">10+ Níveis Únicos</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Multi-language Support</span>
+                  <span className="text-sm text-muted-foreground">Suporte Multi-idioma</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Regular Updates</span>
+                  <span className="text-sm text-muted-foreground">Atualizações Regulares</span>
                 </div>
               </div>
             </div>
-            
+
             <div className="relative">
               <div className="bg-card rounded-2xl p-6 border border-border retro-shadow">
                 <div className="pixel-font text-center">
                   <div className="text-4xl mb-4">🎮</div>
-                  <h4 className="font-bold text-foreground mb-2">Ready to Play?</h4>
+                  <h4 className="font-bold text-foreground mb-2">Pronto para Jogar?</h4>
                   <p className="text-muted-foreground text-sm mb-4">
-                    Join thousands of players already enjoying this unique political adventure!
+                    Junte-se a milhares de jogadores já aproveitando esta aventura política única!
                   </p>
                   <Button className="w-full gaming-gradient">
-                    Start Your Journey
+                    Inicie Sua Jornada
                   </Button>
                 </div>
               </div>
