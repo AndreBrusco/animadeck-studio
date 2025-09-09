@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { Menu, Download, Play } from "lucide-react";
+import { Menu, Gamepad2 } from "lucide-react";
 
 const Header = () => {
   return (
@@ -42,15 +42,11 @@ const Header = () => {
 
           {/* Action Buttons */}
           <div className="flex items-center space-x-4">
-            <Button variant="outline" size="sm" className="hidden sm:flex" asChild>
-              <a href="#trailer">
-                <Play className="w-4 h-4 mr-2" />
-                Ver Trailer
+            <Button size="sm" className="gaming-gradient" asChild>
+              <a href="/play">
+                <Gamepad2 className="w-4 h-4 mr-2" />
+                Jogar Agora
               </a>
-            </Button>
-            <Button size="sm" className="gaming-gradient">
-              <Download className="w-4 h-4 mr-2" />
-              Jogar Agora
             </Button>
             <Button variant="outline" size="icon" className="md:hidden">
               <Menu className="w-4 h-4" />

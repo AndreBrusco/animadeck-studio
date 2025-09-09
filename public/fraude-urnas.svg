@@ -1,0 +1,58 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#90EE90"/>
+  
+  <!-- Robot body -->
+  <rect x="20" y="30" width="24" height="20" fill="#C0C0C0" stroke="#808080" stroke-width="2"/>
+  
+  <!-- Robot head -->
+  <circle cx="32" cy="25" r="12" fill="#F5DEB3" stroke="#D2B48C" stroke-width="2"/>
+  
+  <!-- Hair bun -->
+  <circle cx="32" cy="18" r="6" fill="#808080"/>
+  
+  <!-- Glasses -->
+  <circle cx="28" cy="24" r="4" fill="none" stroke="#000000" stroke-width="2"/>
+  <circle cx="36" cy="24" r="4" fill="none" stroke="#000000" stroke-width="2"/>
+  <line x1="32" y1="24" x2="32" y2="24" stroke="#000000" stroke-width="1"/>
+  
+  <!-- Eyes -->
+  <circle cx="28" cy="24" r="1" fill="#000000"/>
+  <circle cx="36" cy="24" r="1" fill="#000000"/>
+  
+  <!-- Nose -->
+  <circle cx="32" cy="26" r="1" fill="#D2B48C"/>
+  
+  <!-- Mouth -->
+  <path d="M30 28 Q32 30 34 28" stroke="#000000" stroke-width="1" fill="none"/>
+  
+  <!-- Chest screen -->
+  <rect x="24" y="34" width="16" height="12" fill="#000000" stroke="#404040" stroke-width="1"/>
+  <rect x="26" y="36" width="6" height="4" fill="#FF0000"/>
+  <rect x="32" y="36" width="6" height="4" fill="#008000"/>
+  <rect x="26" y="40" width="6" height="4" fill="#8B4513"/>
+  <rect x="32" y="40" width="6" height="4" fill="#90EE90"/>
+  
+  <!-- X on red square -->
+  <path d="M27 37 L31 41" stroke="#FFAAAA" stroke-width="1"/>
+  <path d="M31 37 L27 41" stroke="#FFAAAA" stroke-width="1"/>
+  
+  <!-- Raised arm -->
+  <rect x="16" y="32" width="4" height="12" fill="#C0C0C0" stroke="#808080" stroke-width="1" transform="rotate(-20 18 38)"/>
+  <circle cx="18" cy="30" r="3" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+  
+  <!-- Pointing finger -->
+  <rect x="15" y="28" width="2" height="4" fill="#C0C0C0" stroke="#808080" stroke-width="1" transform="rotate(-20 16 30)"/>
+  
+  <!-- Other arm -->
+  <rect x="44" y="32" width="4" height="12" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+  <circle cx="46" cy="30" r="3" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+  
+  <!-- Legs -->
+  <rect x="22" y="50" width="6" height="8" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+  <rect x="36" y="50" width="6" height="8" fill="#C0C0C0" stroke="#808080" stroke-width="1"/>
+  
+  <!-- Background elements -->
+  <rect x="50" y="10" width="8" height="20" fill="#FFFFFF"/>
+  <rect x="48" y="15" width="12" height="8" fill="#808080"/>
+</svg>

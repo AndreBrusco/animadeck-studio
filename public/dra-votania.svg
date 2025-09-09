@@ -1,0 +1,29 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#90EE90"/>
+  
+  <!-- Ground -->
+  <rect x="0" y="50" width="64" height="14" fill="#228B22"/>
+  
+  <!-- Wall/fence -->
+  <line x1="0" y1="8" x2="64" y2="8" stroke="#F0F0F0" stroke-width="2"/>
+  
+  <!-- Angry blob creature -->
+  <!-- Main body -->
+  <ellipse cx="32" cy="35" rx="18" ry="15" fill="#FFB6C1"/>
+  
+  <!-- Tail extension -->
+  <ellipse cx="18" cy="35" rx="8" ry="6" fill="#FFB6C1"/>
+  
+  <!-- Angry eyebrows -->
+  <path d="M24 28 Q28 26 32 28" stroke="#DDA0DD" stroke-width="3" fill="none"/>
+  <path d="M32 28 Q36 26 40 28" stroke="#DDA0DD" stroke-width="3" fill="none"/>
+  
+  <!-- Frowning mouth -->
+  <path d="M28 40 Q32 38 36 40" stroke="#000000" stroke-width="2" fill="none"/>
+  
+  <!-- Pattern spots -->
+  <circle cx="26" cy="30" r="2" fill="#FFC0CB"/>
+  <circle cx="30" cy="32" r="1.5" fill="#FFC0CB"/>
+  <circle cx="28" cy="38" r="1" fill="#FFC0CB"/>
+</svg>
