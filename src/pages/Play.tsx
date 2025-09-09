@@ -47,12 +47,7 @@ const Play = () => {
 
                         {/* Action Buttons */}
                         <div className="flex items-center space-x-4">
-                            <Button variant="outline" size="sm" className="hidden sm:flex" asChild>
-                                <a href="/#trailer">
-                                    <PlayIcon className="w-4 h-4 mr-2" />
-                                    Ver Trailer
-                                </a>
-                            </Button>
+
                             <Button size="sm" className="gaming-gradient" asChild>
                                 <Link to="/" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-md hover:shadow-primary/10">
                                     <Download className="w-4 h-4 mr-2" />
@@ -87,34 +82,248 @@ const Play = () => {
 
                 {/* Fase 1 */}
                 <section className="mb-16">
-                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 lg:p-12">
-                        <div className="grid lg:grid-cols-2 gap-8 items-center">
-                            <div>
-                                <div className="flex items-center mb-4">
-                                    <Badge className="bg-blue-600 text-white text-lg px-4 py-2 mr-4">
-                                        Fase 1
-                                    </Badge>
-                                    <h2 className="text-3xl font-bold text-gray-900">
-                                        O Início da Jornada
-                                    </h2>
-                                </div>
-                                <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                                    Capi Senador, um jovem idealista, descobre que algo estranho está acontecendo
-                                    no Congresso Nacional. Documentos importantes estão desaparecendo e decisões
-                                    cruciais estão sendo tomadas sem o conhecimento público.
-                                </p>
-                                <div className="bg-white rounded-xl p-6 shadow-sm">
-                                    <h3 className="text-xl font-semibold text-gray-900 mb-3">Objetivos da Fase:</h3>
-                                    <ul className="space-y-2 text-gray-700">
-                                        <li>• Explorar os corredores do Congresso</li>
-                                        <li>• Coletar evidências iniciais</li>
-                                        <li>• Conversar com funcionários</li>
-                                        <li>• Descobrir pistas sobre os documentos</li>
-                                    </ul>
+                    <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-3xl p-8 lg:p-12 border-4 border-blue-200">
+                        {/* Título da Fase */}
+                        <div className="text-center mb-8">
+                            <div className="flex items-center justify-center mb-4">
+                                <Badge className="bg-blue-600 text-white text-lg px-4 py-2 mr-4">
+                                    Fase 1
+                                </Badge>
+                                <h2 className="text-3xl font-bold text-gray-900">
+                                    A Caminhada do Capi Senador
+                                </h2>
+                            </div>
+                            <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                                Capi acorda, fecha a porta de casa (👀 cena inicial) e parte pelas ruas de Brasília em busca de apoio.
+                                De bairro em bairro, ele conversa com cidadãos, escuta problemas reais e apresenta suas propostas.
+                                Cada voto coletado é um passo rumo ao Senado — <strong>mas cuidado com os obstáculos que confundem,</strong>
+                                atrasam e desviam a atenção do bem comum. <strong>Cada voto escondido conta!</strong>
+                            </p>
+                        </div>
+
+                        {/* Objetivos e Controles lado a lado */}
+                        <div className="grid lg:grid-cols-2 gap-8 mb-8">
+                            {/* Objetivos da Fase */}
+                            <div className="bg-white rounded-xl p-6 shadow-sm border-2 border-blue-100">
+                                <h3 className="text-xl font-semibold text-gray-900 mb-4">Objetivos da Fase:</h3>
+                                <div className="space-y-4">
+                                    {/* Objetivo 1 - Votos escondidos */}
+                                    <div className="flex items-center space-x-4 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
+                                        <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
+                                            <img
+                                                src="/votos-escondidos.svg"
+                                                alt="Votos escondidos"
+                                                className="w-12 h-12 object-contain"
+                                            />
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-gray-700 font-medium">Encontrar todos os votos escondidos ao longo de Brasília!</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Objetivo 2 - Fraude urnas */}
+                                    <div className="flex items-center space-x-4 p-3 rounded-lg bg-red-50 hover:bg-red-100 transition-colors">
+                                        <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
+                                            <img
+                                                src="/dra-votania.svg"
+                                                alt="Fraude urnas"
+                                                className="w-12 h-12 object-contain"
+                                            />
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-gray-700 font-medium">Desviar das fraude urnas!</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Objetivo 3 - Dra. Votânia */}
+                                    <div className="flex items-center space-x-4 p-3 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
+                                        <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
+                                            <img
+                                                src="/fraude-urnas.svg"
+                                                alt="Dra. Votânia"
+                                                className="w-12 h-12 object-contain"
+                                            />
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-gray-700 font-medium">Encontrar com a Dra. Votânia</p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div className="bg-gray-200 rounded-xl h-80 flex items-center justify-center">
-                                <p className="text-gray-500 text-lg">Imagem da Fase 1</p>
+
+                            {/* Controles do Jogo */}
+                            <div className="bg-white rounded-xl p-6 shadow-sm border-2 border-blue-100">
+                                <h3 className="text-xl font-semibold text-gray-900 mb-4">Controles do Jogo:</h3>
+                                <div className="space-y-4">
+                                    {/* Mover para a esquerda */}
+                                    <div className="flex items-center space-x-4 p-3 rounded-lg bg-orange-50 hover:bg-orange-100 transition-colors">
+                                        <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
+                                            <div className="w-12 h-12 bg-orange-100 rounded flex items-center justify-center">
+                                                <span className="text-2xl font-bold text-orange-600">←</span>
+                                            </div>
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-gray-700 font-medium">Mover para a esquerda</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Mover para a direita */}
+                                    <div className="flex items-center space-x-4 p-3 rounded-lg bg-orange-50 hover:bg-orange-100 transition-colors">
+                                        <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
+                                            <div className="w-12 h-12 bg-orange-100 rounded flex items-center justify-center">
+                                                <span className="text-2xl font-bold text-orange-600">→</span>
+                                            </div>
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-gray-700 font-medium">Mover para a direita</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Subir e descer escadas */}
+                                    <div className="flex items-center space-x-4 p-3 rounded-lg bg-purple-50 hover:bg-purple-100 transition-colors">
+                                        <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
+                                            <div className="w-12 h-12 bg-purple-100 rounded flex items-center justify-center">
+                                                <div className="flex flex-col items-center">
+                                                    <span className="text-lg font-bold text-purple-600">↑</span>
+                                                    <span className="text-lg font-bold text-purple-600">↓</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-gray-700 font-medium">Subir e descer escadas</p>
+                                        </div>
+                                    </div>
+
+                                    {/* Pular */}
+                                    <div className="flex items-center space-x-4 p-3 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
+                                        <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
+                                            <div className="w-12 h-12 bg-green-100 rounded flex items-center justify-center">
+                                                <span className="text-lg font-bold text-green-600">SPACE</span>
+                                            </div>
+                                        </div>
+                                        <div className="flex-1">
+                                            <p className="text-gray-700 font-medium">Pular</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Imagem da Fase 1 */}
+                        <div className="bg-gray-200 rounded-xl h-80 flex items-center justify-center border-2 border-blue-100">
+                            <p className="text-gray-500 text-lg">Imagem da Fase 1</p>
+                        </div>
+
+                        {/* Aprendizado Cívico */}
+                        <div className="mt-8">
+                            <div className="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-3xl p-8 border-2 border-yellow-200">
+                                <div className="flex items-center mb-6">
+                                    <h2 className="text-2xl font-bold text-gray-900 mr-3">
+                                        Aprendizado Cívico (rapidinho)
+                                    </h2>
+                                    <span className="text-3xl">🎓⚡</span>
+                                </div>
+
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    {/* Como virar senador */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">🏛️</span>
+                                            Como virar senador
+                                        </h3>
+                                        <div className="space-y-3">
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">1</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Filiação partidária</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">2</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Registro na Justiça Eleitoral</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">3</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Campanha regular</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">4</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Maioria de votos no estado/DF</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Mandato e renovação */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">⏰</span>
+                                            Mandato e Renovação
+                                        </h3>
+                                        <div className="space-y-3">
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-green-50">
+                                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-lg">8</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Anos de mandato</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-green-50">
+                                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-lg">3</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Senadores por estado/DF</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-green-50">
+                                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm">1/3</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Renovação alternada</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Papéis dos Poderes */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm md:col-span-2">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">⚖️</span>
+                                            Papéis dos Poderes
+                                        </h3>
+                                        <div className="grid md:grid-cols-3 gap-4">
+                                            <div className="flex items-center space-x-3 p-3 rounded-lg bg-red-50">
+                                                <div className="w-10 h-10 bg-red-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-lg">🏛️</span>
+                                                </div>
+                                                <div>
+                                                    <p className="font-medium text-gray-900 text-sm">Executivo</p>
+                                                    <p className="text-gray-600 text-xs">Executa políticas</p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-3 rounded-lg bg-blue-50">
+                                                <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-lg">📜</span>
+                                                </div>
+                                                <div>
+                                                    <p className="font-medium text-gray-900 text-sm">Legislativo</p>
+                                                    <p className="text-gray-600 text-xs">Faz leis e fiscaliza</p>
+                                                </div>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-3 rounded-lg bg-purple-50">
+                                                <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-lg">⚖️</span>
+                                                </div>
+                                                <div>
+                                                    <p className="font-medium text-gray-900 text-sm">Judiciário</p>
+                                                    <p className="text-gray-600 text-xs">Garante regras (TSE)</p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -122,7 +331,7 @@ const Play = () => {
 
                 {/* Fase 2 */}
                 <section className="mb-16">
-                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 lg:p-12">
+                    <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 lg:p-12 border-4 border-green-200">
                         <div className="grid lg:grid-cols-2 gap-8 items-center">
                             <div>
                                 <div className="flex items-center mb-4">
@@ -151,7 +360,7 @@ const Play = () => {
                             <div className="bg-white rounded-xl p-4 shadow-sm">
                                 <iframe
                                     src="https://scratch.mit.edu/projects/1212364427/embed"
-                                    allowtransparency="true"
+                                    allowTransparency={true}
                                     width="100%"
                                     height="402"
                                     frameBorder="0"
@@ -265,7 +474,7 @@ const Play = () => {
                             <div className="bg-white rounded-xl p-4 shadow-sm">
                                 <iframe
                                     src="https://scratch.mit.edu/projects/1212366977/embed"
-                                    allowtransparency="true"
+                                    allowTransparency={true}
                                     width="100%"
                                     height="402"
                                     frameBorder="0"
@@ -275,27 +484,6 @@ const Play = () => {
                                 ></iframe>
                             </div>
                         </div>
-                    </div>
-                </section>
-
-                {/* Call to Action */}
-                <section className="text-center bg-gradient-to-r from-blue-600 to-indigo-600 rounded-3xl p-12 text-white">
-                    <h2 className="text-4xl font-bold mb-6">
-                        Pronto para Iniciar Sua Jornada?
-                    </h2>
-                    <p className="text-xl text-blue-100 mb-8 max-w-2xl mx-auto">
-                        Embarque nesta aventura épica e ajude Capi Senador a desvendar
-                        os segredos legislativos que ameaçam a democracia brasileira.
-                    </p>
-                    <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                        <Button size="lg" className="bg-white text-blue-600 hover:bg-blue-50 text-lg px-8 py-4">
-                            <Gamepad2 className="w-6 h-6 mr-3" />
-                            Começar Jornada
-                        </Button>
-                        <Button variant="outline" size="lg" className="border-white text-white hover:bg-white/10 text-lg px-8 py-4">
-                            <PlayIcon className="w-6 h-6 mr-3" />
-                            Ver Trailer
-                        </Button>
                     </div>
                 </section>
             </main>
