@@ -11,11 +11,25 @@ import DraVotania from "@/assets/Dra. Votania.png";
 import DonaJustina from "@/assets/Dona Justina.png";
 import Presidenton from "@/assets/Presidenton.png";
 
+// Importar as imagens dos cenários
+import CamaraDeputados from "@/assets/camara_deputados.png";
+import Congresso from "@/assets/congresso.jpg";
+import TunelDoTempo from "@/assets/tunel_do_tempo.png";
+import Senado from "@/assets/senado.png";
+import RampaSenado from "@/assets/rampa_senado.png.png";
+
+// Importar as imagens dos easter eggs
+import CapaEasterEggs from "@/assets/capa_easter-eggs.jpg";
+import LigaBem from "@/assets/ligabem.jpg";
+import ILB from "@/assets/ilb.png";
+import Plenarinho from "@/assets/plenarinho.png";
+
 const GallerySection = () => {
   const [activeCategory, setActiveCategory] = useState("Todos");
   const [currentCharacterIndex, setCurrentCharacterIndex] = useState(0);
+  const [currentScenarioIndex, setCurrentScenarioIndex] = useState(0);
 
-  const categories = ["Todos", "Personagens", "Cenários", "Assets", "Easter Eggs"];
+  const categories = ["Todos", "Personagens", "Cenários", "Easter Eggs"];
 
   // Dados dos personagens
   const characters = [
@@ -41,30 +55,52 @@ const GallerySection = () => {
     }
   ];
 
-  // Dados dos cenários (placeholder)
+  // Dados dos cenários
   const scenarios = [
     {
-      name: "Congresso Nacional",
-      image: "/placeholder.svg",
-      description: "O icônico prédio do Congresso Nacional brasileiro, recriado em pixel art para uma experiência imersiva na política nacional."
-    }
-  ];
-
-  // Dados dos assets (placeholder)
-  const assets = [
+      name: "Câmara dos Deputados",
+      image: CamaraDeputados,
+      description: "O coração da democracia brasileira, onde os deputados federais debatem e votam as leis que moldam o país. Um ambiente de intensa atividade política e decisões históricas."
+    },
     {
-      name: "Projeto de Lei",
-      image: "/projeto-lei-asset.svg",
-      description: "Elementos visuais que representam documentos legislativos e processos políticos do jogo."
+      name: "Congresso Nacional",
+      image: Congresso,
+      description: "O majestoso prédio do Congresso Nacional, símbolo máximo da política brasileira. Sua arquitetura icônica abriga as duas casas legislativas do país."
+    },
+    {
+      name: "Túnel do Tempo",
+      image: TunelDoTempo,
+      description: "Um portal mágico que permite viajar através da história política brasileira, testemunhando momentos marcantes e decisões que moldaram o país."
+    },
+    {
+      name: "Senado Federal",
+      image: Senado,
+      description: "A casa da sabedoria política, onde senadores representam os estados brasileiros e tomam decisões estratégicas para o futuro da nação."
+    },
+    {
+      name: "Rampa do Senado",
+      image: RampaSenado,
+      description: "A famosa rampa que conecta os diferentes níveis do Senado, testemunha de caminhadas históricas e momentos decisivos da política brasileira."
     }
   ];
 
-  // Dados dos easter eggs (placeholder)
+
+  // Dados dos easter eggs
   const easterEggs = [
     {
-      name: "Votos Escondidos",
-      image: "/votos-escondidos.svg",
-      description: "Secrets e referências especiais escondidas ao longo do jogo para jogadores mais atentos."
+      name: "Liga Bem",
+      image: LigaBem,
+      description: "Uma referência especial ao programa social e filantrópico do Senado Federal, formado por grupo de colaboradores voluntários com a vontade de mudar o mundo!"
+    },
+    {
+      name: "ILB - Instituto Legislativo Brasileiro",
+      image: ILB,
+      description: "Homenagem ao instituto que capacita servidores do Congresso Nacional, mostrando a importância da educação legislativa na política brasileira. Ponto de sabedoria! Aqui o jogador desbloqueia dicas, tutoriais e minigames educativos sobre cidadania, processo legislativo e história política."
+    },
+    {
+      name: "Plenarinho",
+      image: Plenarinho,
+      description: "Referência ao famoso e saudouso plenário do Senado Federal. Obra que faz parte do acervo do Museu da Casa."
     }
   ];
 
@@ -74,6 +110,14 @@ const GallerySection = () => {
 
   const prevCharacter = () => {
     setCurrentCharacterIndex((prev) => (prev - 1 + characters.length) % characters.length);
+  };
+
+  const nextScenario = () => {
+    setCurrentScenarioIndex((prev) => (prev + 1) % scenarios.length);
+  };
+
+  const prevScenario = () => {
+    setCurrentScenarioIndex((prev) => (prev - 1 + scenarios.length) % scenarios.length);
   };
 
   const renderContent = () => {
@@ -145,52 +189,107 @@ const GallerySection = () => {
 
       case "Cenários":
         return (
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden">
-              <CardContent className="p-8">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    Cenários em Desenvolvimento
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Em breve, você poderá explorar os diversos cenários do jogo.
-                  </p>
+              <CardContent className="p-0">
+                <div className="p-8">
+                  {/* Imagem do cenário - ocupa toda a largura */}
+                  <div className="relative mb-8">
+                    <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center p-8">
+                      <img
+                        src={scenarios[currentScenarioIndex].image}
+                        alt={scenarios[currentScenarioIndex].name}
+                        className="max-w-full max-h-full object-contain"
+                      />
+                    </div>
+
+                    {/* Navegação */}
+                    <div className="flex justify-between mt-4">
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={prevScenario}
+                        className="flex items-center gap-2"
+                      >
+                        <ChevronLeft className="w-4 h-4" />
+                        Anterior
+                      </Button>
+                      <Button
+                        variant="outline"
+                        size="sm"
+                        onClick={nextScenario}
+                        className="flex items-center gap-2"
+                      >
+                        Próximo
+                        <ChevronRight className="w-4 h-4" />
+                      </Button>
+                    </div>
+                  </div>
+
+                  {/* Descrição do cenário - abaixo da imagem */}
+                  <div className="text-center">
+                    <h3 className="text-4xl font-bold text-foreground mb-6">
+                      {scenarios[currentScenarioIndex].name}
+                    </h3>
+                    <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
+                      {scenarios[currentScenarioIndex].description}
+                    </p>
+
+                    {/* Indicador de posição */}
+                    <div className="flex justify-center mt-8 gap-2">
+                      {scenarios.map((_, index) => (
+                        <div
+                          key={index}
+                          className={`w-3 h-3 rounded-full transition-colors ${index === currentScenarioIndex ? "bg-primary" : "bg-muted"
+                            }`}
+                        />
+                      ))}
+                    </div>
+                  </div>
                 </div>
               </CardContent>
             </Card>
           </div>
         );
 
-      case "Assets":
-        return (
-          <div className="max-w-4xl mx-auto">
-            <Card className="overflow-hidden">
-              <CardContent className="p-8">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    Assets do Jogo
-                  </h3>
-                  <p className="text-muted-foreground">
-                    Elementos visuais e recursos do Capi Senador.
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        );
 
       case "Easter Eggs":
         return (
-          <div className="max-w-4xl mx-auto">
+          <div className="max-w-6xl mx-auto">
             <Card className="overflow-hidden">
               <CardContent className="p-8">
-                <div className="text-center">
-                  <h3 className="text-2xl font-bold text-foreground mb-4">
-                    Easter Eggs
+                <div className="text-center mb-12">
+                  <h3 className="text-4xl font-bold text-foreground mb-4">
+                    🥚 Easter Eggs
                   </h3>
-                  <p className="text-muted-foreground">
-                    Descubra os segredos escondidos no jogo!
+                  <p className="text-xl text-muted-foreground">
+                    Descubra as referências especiais escondidas no jogo!
                   </p>
+                </div>
+
+                <div className="space-y-8">
+                  {easterEggs.map((easterEgg, index) => (
+                    <div key={index} className="grid md:grid-cols-2 gap-8 items-center">
+                      <div className={`${index % 2 === 1 ? 'md:order-2' : ''}`}>
+                        <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center p-6">
+                          <img
+                            src={easterEgg.image}
+                            alt={easterEgg.name}
+                            className="max-w-full max-h-full object-contain"
+                          />
+                        </div>
+                      </div>
+
+                      <div className={`${index % 2 === 1 ? 'md:order-1' : ''}`}>
+                        <h4 className="text-2xl font-bold text-foreground mb-4">
+                          {easterEgg.name}
+                        </h4>
+                        <p className="text-lg text-muted-foreground leading-relaxed">
+                          {easterEgg.description}
+                        </p>
+                      </div>
+                    </div>
+                  ))}
                 </div>
               </CardContent>
             </Card>
@@ -202,7 +301,10 @@ const GallerySection = () => {
           <div className="max-w-6xl mx-auto">
             <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
               {/* Personagens */}
-              <Card className="group hover:shadow-lg transition-all duration-300">
+              <Card
+                className="group hover:shadow-lg transition-all duration-300 cursor-pointer"
+                onClick={() => setActiveCategory("Personagens")}
+              >
                 <CardContent className="p-6">
                   <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-4">
                     <img
@@ -219,10 +321,17 @@ const GallerySection = () => {
               </Card>
 
               {/* Cenários */}
-              <Card className="group hover:shadow-lg transition-all duration-300">
+              <Card
+                className="group hover:shadow-lg transition-all duration-300 cursor-pointer"
+                onClick={() => setActiveCategory("Cenários")}
+              >
                 <CardContent className="p-6">
                   <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-4">
-                    <ImageIcon className="w-16 h-16 text-primary" />
+                    <img
+                      src={Congresso}
+                      alt="Congresso Nacional"
+                      className="max-w-full max-h-full object-contain"
+                    />
                   </div>
                   <h3 className="font-semibold text-foreground mb-2">Cenários</h3>
                   <p className="text-sm text-muted-foreground">
@@ -231,29 +340,16 @@ const GallerySection = () => {
                 </CardContent>
               </Card>
 
-              {/* Assets */}
-              <Card className="group hover:shadow-lg transition-all duration-300">
-                <CardContent className="p-6">
-                  <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-4">
-                    <img
-                      src="/projeto-lei-asset.svg"
-                      alt="Assets"
-                      className="max-w-full max-h-full object-contain"
-                    />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Assets</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Elementos visuais e recursos do jogo
-                  </p>
-                </CardContent>
-              </Card>
 
               {/* Easter Eggs */}
-              <Card className="group hover:shadow-lg transition-all duration-300">
+              <Card
+                className="group hover:shadow-lg transition-all duration-300 cursor-pointer"
+                onClick={() => setActiveCategory("Easter Eggs")}
+              >
                 <CardContent className="p-6">
                   <div className="aspect-square bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center mb-4">
                     <img
-                      src="/votos-escondidos.svg"
+                      src={CapaEasterEggs}
                       alt="Easter Eggs"
                       className="max-w-full max-h-full object-contain"
                     />
@@ -265,18 +361,6 @@ const GallerySection = () => {
                 </CardContent>
               </Card>
 
-              {/* Vídeo Trailer */}
-              <Card className="group hover:shadow-lg transition-all duration-300 md:col-span-2 lg:col-span-1">
-                <CardContent className="p-6">
-                  <div className="aspect-video bg-black rounded-lg flex items-center justify-center mb-4">
-                    <Play className="w-16 h-16 text-white" />
-                  </div>
-                  <h3 className="font-semibold text-foreground mb-2">Trailer</h3>
-                  <p className="text-sm text-muted-foreground">
-                    Veja o jogo em ação
-                  </p>
-                </CardContent>
-              </Card>
             </div>
           </div>
         );
@@ -317,27 +401,40 @@ const GallerySection = () => {
         {renderContent()}
 
         {/* Video Spotlight */}
-        <div id="trailer" className="mt-16">
-          <Card className="max-w-4xl mx-auto overflow-hidden">
-            <CardContent className="p-0">
-              <div className="relative aspect-video bg-black rounded-lg overflow-hidden">
-                <video
-                  className="w-full h-full object-cover"
-                  controls
-                  poster="/trailer-poster.jpg"
-                  preload="metadata"
-                >
-                  <source src="/trailer.mp4" type="video/mp4" />
-                  <source src="/trailer.webm" type="video/webm" />
-                  <p className="text-white text-center p-8">
-                    Seu navegador não suporta vídeos HTML5.
-                    <a href="/trailer.mp4" className="text-blue-400 underline">Clique aqui para baixar o vídeo</a>
-                  </p>
-                </video>
-                <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent pointer-events-none"></div>
-              </div>
-            </CardContent>
-          </Card>
+        <div id="trailer" className="mt-20 py-16">
+          <div className="container mx-auto px-4 text-center">
+            <div className="mb-12">
+              <h2 className="text-5xl lg:text-5xl font-bold bg-gradient-to-r from-blue-600 via-blue-500 to-blue-700 bg-clip-text text-transparent mb-2">
+                🎬 Assista agora o trailer do jogo!
+              </h2>
+              <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+                Descubra a aventura política que está esperando por você
+              </p>
+            </div>
+
+            <div className="max-w-5xl mx-auto">
+              <Card className="overflow-hidden shadow-2xl border-0 bg-gradient-to-br from-slate-900 to-slate-800">
+                <CardContent className="p-0">
+                  <div className="relative aspect-video bg-black rounded-lg overflow-hidden">
+                    <video
+                      className="w-full h-full object-cover"
+                      controls
+                      poster="/trailer-poster.jpg"
+                      preload="metadata"
+                    >
+                      <source src="/trailer.mp4" type="video/mp4" />
+                      <source src="/trailer.webm" type="video/webm" />
+                      <p className="text-white text-center p-8">
+                        Seu navegador não suporta vídeos HTML5.
+                        <a href="/trailer.mp4" className="text-blue-400 underline">Clique aqui para baixar o vídeo</a>
+                      </p>
+                    </video>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
+                  </div>
+                </CardContent>
+              </Card>
+            </div>
+          </div>
         </div>
 
       </div>

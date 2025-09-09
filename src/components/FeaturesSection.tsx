@@ -118,7 +118,7 @@ const FeaturesSection = () => {
               <div className="flex flex-wrap gap-4">
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-primary rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">10+ Níveis Únicos</span>
+                  <span className="text-sm text-muted-foreground">6+ Níveis Únicos</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
