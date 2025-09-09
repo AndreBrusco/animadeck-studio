@@ -339,21 +339,20 @@ const Play = () => {
                                         Fase 2
                                     </Badge>
                                     <h2 className="text-3xl font-bold text-gray-900">
-                                        A Descoberta
+                                        O Projeto de Lei que vai mudar o Brasil!
                                     </h2>
                                 </div>
                                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                                    Capi encontra um antigo sistema de túneis secretos que conectam diferentes
-                                    partes do Congresso. Aqui, ele descobre que existe uma conspiração muito
-                                    maior do que imaginava, envolvendo figuras poderosas.
+                                    Nos túneis e corredores do Congresso, Capi encontra pistas de um <strong>Projeto de Lei (PL)</strong> capaz de melhorar a vida de milhões.
+                                    Para montar o texto final, ele precisa coletar <strong>fragmentos de artigos e incisos</strong>, enquanto dribla os <strong>Anti-Democratis</strong>,
+                                    capangas que tentam confundir o processo e atrasar a votação. <strong>Corra, revise, componha o PL — e não deixe a democracia cair!</strong>
                                 </p>
                                 <div className="bg-white rounded-xl p-6 shadow-sm">
                                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Objetivos da Fase:</h3>
                                     <ul className="space-y-2 text-gray-700">
-                                        <li>• Navegar pelos túneis secretos</li>
-                                        <li>• Resolver quebra-cabeças complexos</li>
-                                        <li>• Encontrar documentos confidenciais</li>
-                                        <li>• Desvendar a identidade dos conspiradores</li>
+                                        <li>• Colete <strong>10 fragmentos de Projetos de Lei</strong> para completar o texto.</li>
+                                        <li>• Fuja dos Anti-Democratis</li>
+                                        <li><strong>• Finalize o projeto</strong> e entregue para análise antes de ser alcançado!</li>
                                     </ul>
                                 </div>
                             </div>
@@ -368,6 +367,104 @@ const Play = () => {
                                     allowFullScreen
                                     className="rounded-lg"
                                 ></iframe>
+                            </div>
+                        </div>
+
+                        {/* Aprendizado Cívico - Fase 2 */}
+                        <div className="mt-8">
+                            <div className="bg-gradient-to-r from-green-50 to-emerald-50 rounded-3xl p-8 border-2 border-green-200">
+                                <div className="flex items-center mb-6">
+                                    <h2 className="text-2xl font-bold text-gray-900 mr-3">
+                                        Aprendizado Cívico (rapidinho)
+                                    </h2>
+                                    <span className="text-3xl">🎓⚡</span>
+                                </div>
+
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    {/* Processo Legislativo - Parte 1 */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">📋</span>
+                                            Caminho do Projeto de Lei
+                                        </h3>
+                                        <div className="space-y-3">
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-green-50">
+                                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-green-600">1</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Iniciativa: apresentação do PL</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-green-50">
+                                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-green-600">2</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Numeração e leitura: protocolo e envio às comissões</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-green-50">
+                                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-green-600">3</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Comissões: análise de constitucionalidade, mérito e emendas</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-green-50">
+                                                <div className="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-green-600">4</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Votação na Casa iniciadora: plenário aprova e envia à Casa revisora</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Processo Legislativo - Parte 2 */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">⚖️</span>
+                                            Finalização e Aprovação
+                                        </h3>
+                                        <div className="space-y-3">
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">5</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Revisão: aprovação, emenda ou rejeição pela outra Casa</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">6</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Envio ao Executivo: sanção ou veto presidencial</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">7</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Veto: Congresso pode derrubar ou manter</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">8</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Virou lei: promulgação e publicação no Diário Oficial</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Resumo do Processo */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm md:col-span-2">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">📝</span>
+                                            Resumo: Como um PL vira Lei
+                                        </h3>
+                                        <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-4 border-l-4 border-yellow-400">
+                                            <p className="text-gray-700 text-sm leading-relaxed">
+                                                <strong>Em resumo:</strong> Um Projeto de Lei começa com sua apresentação, passa por comissões para análise,
+                                                é votado nas duas Casas do Congresso (Câmara e Senado), vai para o Presidente que pode sancionar ou vetar,
+                                                e se aprovado, vira lei após ser publicado no Diário Oficial. Todo esse processo garante que as leis sejam
+                                                bem analisadas e representem a vontade do povo brasileiro! 🇧🇷
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
