@@ -1,0 +1,27 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="64" height="64" fill="#F5F5DC"/>
+  
+  <!-- Scroll body -->
+  <rect x="8" y="16" width="48" height="32" fill="#F5F5DC" stroke="#000000" stroke-width="2"/>
+  
+  <!-- Rolled up left side -->
+  <ellipse cx="12" cy="32" rx="4" ry="16" fill="#E6E6E6" stroke="#000000" stroke-width="1"/>
+  
+  <!-- Rolled up right side -->
+  <ellipse cx="52" cy="32" rx="4" ry="16" fill="#E6E6E6" stroke="#000000" stroke-width="1"/>
+  
+  <!-- Text lines on scroll -->
+  <line x1="16" y1="24" x2="44" y2="24" stroke="#000000" stroke-width="1"/>
+  <line x1="16" y1="28" x2="40" y2="28" stroke="#000000" stroke-width="1"/>
+  <line x1="16" y1="32" x2="42" y2="32" stroke="#000000" stroke-width="1"/>
+  <line x1="16" y1="36" x2="38" y2="36" stroke="#000000" stroke-width="1"/>
+  <line x1="16" y1="40" x2="44" y2="40" stroke="#000000" stroke-width="1"/>
+  
+  <!-- Golden seal with arrow -->
+  <circle cx="20" cy="20" r="8" fill="#FFD700" stroke="#000000" stroke-width="1"/>
+  <path d="M16 20 L20 16 L20 18 L24 18 L24 22 L20 22 L20 24 Z" fill="#000000"/>
+  
+  <!-- Red ribbon -->
+  <rect x="18" y="12" width="4" height="8" fill="#FF0000"/>
+</svg>
