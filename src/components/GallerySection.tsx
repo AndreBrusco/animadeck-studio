@@ -193,8 +193,18 @@ const GallerySection = () => {
             <Card className="overflow-hidden">
               <CardContent className="p-0">
                 <div className="p-8">
+                  {/* Descrição do cenário - acima da imagem */}
+                  <div className="text-center mb-8">
+                    <h3 className="text-2xl font-bold text-foreground mb-4">
+                      {scenarios[currentScenarioIndex].name}
+                    </h3>
+                    <p className="text-base text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+                      {scenarios[currentScenarioIndex].description}
+                    </p>
+                  </div>
+
                   {/* Imagem do cenário - ocupa toda a largura */}
-                  <div className="relative mb-8">
+                  <div className="relative">
                     <div className="aspect-video bg-gradient-to-br from-primary/10 to-accent/10 rounded-lg flex items-center justify-center p-8">
                       <img
                         src={scenarios[currentScenarioIndex].image}
@@ -226,25 +236,15 @@ const GallerySection = () => {
                     </div>
                   </div>
 
-                  {/* Descrição do cenário - abaixo da imagem */}
-                  <div className="text-center">
-                    <h3 className="text-4xl font-bold text-foreground mb-6">
-                      {scenarios[currentScenarioIndex].name}
-                    </h3>
-                    <p className="text-xl text-muted-foreground leading-relaxed max-w-4xl mx-auto">
-                      {scenarios[currentScenarioIndex].description}
-                    </p>
-
-                    {/* Indicador de posição */}
-                    <div className="flex justify-center mt-8 gap-2">
-                      {scenarios.map((_, index) => (
-                        <div
-                          key={index}
-                          className={`w-3 h-3 rounded-full transition-colors ${index === currentScenarioIndex ? "bg-primary" : "bg-muted"
-                            }`}
-                        />
-                      ))}
-                    </div>
+                  {/* Indicador de posição */}
+                  <div className="flex justify-center mt-8 gap-2">
+                    {scenarios.map((_, index) => (
+                      <div
+                        key={index}
+                        className={`w-3 h-3 rounded-full transition-colors ${index === currentScenarioIndex ? "bg-primary" : "bg-muted"
+                          }`}
+                      />
+                    ))}
                   </div>
                 </div>
               </CardContent>

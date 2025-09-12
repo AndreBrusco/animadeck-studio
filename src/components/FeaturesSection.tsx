@@ -7,47 +7,58 @@ import {
   Globe,
   BookOpen,
   Zap,
-  Heart,
-  ChevronRight
+  Heart
 } from "lucide-react";
 
 const FeaturesSection = () => {
   const features = [
     {
-      icon: <Gamepad2 className="w-8 h-8 text-primary" />,
+      icon: <Gamepad2 className="w-8 h-8 text-yellow-700" />,
       title: "Jogabilidade Clássica",
       description: "Experimente mecânicas de plataforma inspiradas no Mario com controles suaves e jogabilidade responsiva.",
-      highlight: "Jogos Retro"
+      highlight: "Jogos Retro",
+      gradient: "from-yellow-50 to-yellow-100",
+      shadow: "shadow-yellow-200/30"
     },
     {
-      icon: <Palette className="w-8 h-8 text-primary" />,
+      icon: <Palette className="w-8 h-8 text-blue-700" />,
       title: "Maestria em Pixel Art",
       description: "Arte pixelada linda feita à mão que traz cenários políticos brasileiros à vida.",
-      highlight: "Excelência Visual"
+      highlight: "Excelência Visual",
+      gradient: "from-blue-50 to-blue-100",
+      shadow: "shadow-blue-200/30"
     },
     {
-      icon: <Globe className="w-8 h-8 text-primary" />,
+      icon: <Globe className="w-8 h-8 text-green-700" />,
       title: "Cultura Brasileira",
       description: "Mergulhe na cultura política brasileira autêntica e marcos históricos.",
-      highlight: "Aprendizado Cultural"
+      highlight: "Aprendizado Cultural",
+      gradient: "from-green-50 to-green-100",
+      shadow: "shadow-green-200/30"
     },
     {
-      icon: <BookOpen className="w-8 h-8 text-primary" />,
+      icon: <BookOpen className="w-8 h-8 text-gray-700" />,
       title: "Conteúdo Educacional",
       description: "Aprenda sobre processos legislativos enquanto se diverte nesta experiência única de jogo.",
-      highlight: "Aprenda & Jogue"
+      highlight: "Aprenda & Jogue",
+      gradient: "from-gray-50 to-gray-100",
+      shadow: "shadow-gray-200/30"
     },
     {
-      icon: <Zap className="w-8 h-8 text-primary" />,
+      icon: <Zap className="w-8 h-8 text-yellow-700" />,
       title: "Desafios Dinâmicos",
       description: "Enfrente cenários políticos cada vez mais complexos que testam seu pensamento estratégico.",
-      highlight: "Jogabilidade Estratégica"
+      highlight: "Jogabilidade Estratégica",
+      gradient: "from-yellow-50 to-orange-50",
+      shadow: "shadow-orange-200/30"
     },
     {
-      icon: <Heart className="w-8 h-8 text-primary" />,
+      icon: <Heart className="w-8 h-8 text-green-700" />,
       title: "Feito com Amor",
       description: "Criado com paixão tanto por jogos quanto por educação política por desenvolvedores brasileiros.",
-      highlight: "Espírito Indie"
+      highlight: "Espírito Indie",
+      gradient: "from-green-50 to-emerald-50",
+      shadow: "shadow-emerald-200/30"
     }
   ];
 
@@ -69,32 +80,24 @@ const FeaturesSection = () => {
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {features.map((feature, index) => (
-            <Card key={index} className="group hover:shadow-lg transition-all duration-300 border-2 hover:border-primary/50">
+            <Card key={index} className={`group hover:shadow-2xl transition-all duration-500 border-0 overflow-hidden bg-gradient-to-br ${feature.gradient} ${feature.shadow} hover:scale-105`}>
               <CardHeader className="pb-4">
                 <div className="flex items-center justify-between mb-4">
-                  <div className="p-3 bg-secondary rounded-lg group-hover:bg-primary group-hover:text-primary-foreground transition-colors">
+                  <div className="p-4 bg-white/60 rounded-xl group-hover:bg-white/80 transition-all duration-300 shadow-lg">
                     {feature.icon}
                   </div>
-                  <Badge variant="outline" className="text-xs">
+                  <Badge className="text-xs bg-white/80 text-gray-800 border-gray-300">
                     {feature.highlight}
                   </Badge>
                 </div>
-                <CardTitle className="text-xl group-hover:text-primary transition-colors">
+                <CardTitle className="text-xl text-gray-900 font-bold group-hover:text-gray-800 transition-colors">
                   {feature.title}
                 </CardTitle>
               </CardHeader>
               <CardContent>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-gray-700 leading-relaxed font-medium">
                   {feature.description}
                 </p>
-                <Button
-                  variant="ghost"
-                  size="sm"
-                  className="mt-4 p-0 h-auto text-primary hover:text-primary/80 group-hover:translate-x-1 transition-transform"
-                >
-                  Saiba mais
-                  <ChevronRight className="w-4 h-4 ml-1" />
-                </Button>
               </CardContent>
             </Card>
           ))}
@@ -122,7 +125,7 @@ const FeaturesSection = () => {
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-accent rounded-full"></div>
-                  <span className="text-sm text-muted-foreground">Suporte Multi-idioma</span>
+                  <span className="text-sm text-muted-foreground">Amor pelo Brasil</span>
                 </div>
                 <div className="flex items-center space-x-2">
                   <div className="w-2 h-2 bg-secondary rounded-full"></div>
@@ -139,8 +142,10 @@ const FeaturesSection = () => {
                   <p className="text-muted-foreground text-sm mb-4">
                     Junte-se a milhares de jogadores já aproveitando esta aventura política única!
                   </p>
-                  <Button className="w-full gaming-gradient">
-                    Inicie Sua Jornada
+                  <Button className="w-full gaming-gradient" asChild>
+                    <a href="/play">
+                      Inicie Sua Jornada
+                    </a>
                   </Button>
                 </div>
               </div>

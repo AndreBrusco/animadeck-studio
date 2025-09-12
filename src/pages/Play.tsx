@@ -4,15 +4,39 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Play as PlayIcon, Download, Star, Gamepad2, Users, Trophy, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import plenarioCadeado from "@/assets/plenario_cadeado.png";
+import presidentonTunel from "@/assets/Presidenton_tunel.png";
+import plenarinho from "@/assets/plenarinho.png";
+import labirintoCamara from "@/assets/labirinto_camara.png";
+import donaJustina from "@/assets/Dona Justina.png";
+import presidentonTunelImage from "@/assets/Presidenton_tunel.png";
+import tunelTempo from "@/assets/tunel_tempo.png";
+import capaEasterEggs from "@/assets/capa_easter-eggs.jpg";
 
 const Play = () => {
+    // Estado para controlar o carrossel da Fase 3
+    const [currentFase3ImageIndex, setCurrentFase3ImageIndex] = useState(0);
     // Estado para controlar o carrossel da Fase 4
     const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
-    const fase4Images = [
-        "/fase-4.png",
-        "/fase-4-2.png"
+    const fase3Images = [
+        plenarioCadeado,
+        labirintoCamara
     ];
+
+    const fase4Images = [
+        tunelTempo,
+        plenarinho,
+        capaEasterEggs
+    ];
+
+    const nextFase3Image = () => {
+        setCurrentFase3ImageIndex((prev) => (prev + 1) % fase3Images.length);
+    };
+
+    const prevFase3Image = () => {
+        setCurrentFase3ImageIndex((prev) => (prev - 1 + fase3Images.length) % fase3Images.length);
+    };
 
     const nextImage = () => {
         setCurrentImageIndex((prev) => (prev + 1) % fase4Images.length);
@@ -66,7 +90,7 @@ const Play = () => {
 
                             <Button size="sm" className="gaming-gradient" asChild>
                                 <Link to="/" className="px-4 py-2 rounded-lg text-foreground hover:text-primary hover:bg-primary/10 border border-transparent hover:border-primary/20 transition-all duration-300 hover:shadow-md hover:shadow-primary/10">
-                                    <Download className="w-4 h-4 mr-2" />
+                                    <ArrowLeft className="w-4 h-4 mr-2" />
                                     Voltar a Página Inicial
                                 </Link>
                             </Button>
@@ -133,7 +157,7 @@ const Play = () => {
                                             />
                                         </div>
                                         <div className="flex-1">
-                                            <p className="text-gray-700 font-medium">Encontrar todos os votos escondidos ao longo de Brasília!</p>
+                                            <p className="text-gray-700 font-medium">Adquira 1.500 ponto/votos e torne-se um Senador!!</p>
                                         </div>
                                     </div>
 
@@ -161,7 +185,7 @@ const Play = () => {
                                             />
                                         </div>
                                         <div className="flex-1">
-                                            <p className="text-gray-700 font-medium">Encontrar com a Dra. Votânia</p>
+                                            <p className="text-gray-700 font-medium">Encontre com a Dra. Votânia, e siga seu caminho até o parlamento.</p>
                                         </div>
                                     </div>
                                 </div>
@@ -225,9 +249,29 @@ const Play = () => {
                             </div>
                         </div>
 
-                        {/* Imagem da Fase 1 */}
-                        <div className="bg-gray-200 rounded-xl h-80 flex items-center justify-center border-2 border-blue-100">
-                            <p className="text-gray-500 text-lg">Imagem da Fase 1</p>
+                        {/* Jogo da Fase 1 */}
+                        <div className="bg-white rounded-xl p-4 shadow-lg border-2 border-blue-100 hover:shadow-xl transition-shadow duration-300">
+                            <div className="mb-4 text-center">
+                                <h3 className="text-xl font-semibold text-gray-900 mb-2">
+                                    🎮 Jogue Agora: A Caminhada do Capi Senador
+                                </h3>
+                                <p className="text-sm text-gray-600">
+                                    Use as setas para se mover, SPACE para pular e colete todos os votos escondidos!
+                                </p>
+                            </div>
+                            <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
+                                <iframe
+                                    src="https://gd.games/games/f1aae93f-8bdd-4a2d-b204-50de0409d215"
+                                    allowTransparency={true}
+                                    width="100%"
+                                    height="100%"
+                                    frameBorder="0"
+                                    scrolling="no"
+                                    allowFullScreen
+                                    className="rounded-lg absolute inset-0 w-full h-full"
+                                    title="Capi Senador - Fase 1: A Caminhada do Capi Senador"
+                                ></iframe>
+                            </div>
                         </div>
 
                         {/* Aprendizado Cívico */}
@@ -351,15 +395,15 @@ const Play = () => {
                         <div className="grid lg:grid-cols-2 gap-8 items-center">
                             <div>
                                 <div className="flex items-center mb-4">
-                                    <Badge className="bg-green-600 text-white text-lg px-4 py-2 mr-4">
-                                        Fase 2
+                                    <Badge className="bg-green-600 text-white text-lg px-8 py-2 mr-8">
+                                        Fase2
                                     </Badge>
                                     <h2 className="text-3xl font-bold text-gray-900">
                                         O Projeto de Lei que vai mudar o Brasil!
                                     </h2>
                                 </div>
                                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                                    Nos túneis e corredores do Congresso, Capi encontra pistas de um <strong>Projeto de Lei (PL)</strong> capaz de melhorar a vida de milhões.
+                                    Espalhados pelo parlamento, Capi encontra pistas de um <strong>Projeto de Lei (PL)</strong> capaz de melhorar a vida de milhões.
                                     Para montar o texto final, ele precisa coletar <strong>fragmentos de artigos e incisos</strong>, enquanto dribla os <strong>Anti-Democratis</strong>,
                                     capangas que tentam confundir o processo e atrasar a votação. <strong>Corra, revise, componha o PL — e não deixe a democracia cair!</strong>
                                 </p>
@@ -490,8 +534,66 @@ const Play = () => {
                 <section className="mb-16">
                     <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-3xl p-8 lg:p-12">
                         <div className="grid lg:grid-cols-2 gap-8 items-center">
-                            <div className="bg-gray-200 rounded-xl h-80 flex items-center justify-center">
-                                <p className="text-gray-500 text-lg">Imagem da Fase 3</p>
+                            <div className="relative rounded-xl h-80 overflow-hidden shadow-lg">
+                                {/* Imagem atual */}
+                                <img
+                                    src={fase3Images[currentFase3ImageIndex]}
+                                    alt={`O Confronto - Imagem ${currentFase3ImageIndex + 1}`}
+                                    className="w-full h-full object-cover"
+                                />
+
+                                {/* Overlay */}
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
+
+                                {/* Conteúdo sobreposto */}
+                                <div className="absolute bottom-4 left-4 text-white">
+                                    <h3 className="text-lg font-bold">
+                                        {currentFase3ImageIndex === 0 ? "🔒 O Confronto" : "🏛️ Labirinto da Câmara"}
+                                    </h3>
+                                    <p className="text-sm opacity-90">
+                                        {currentFase3ImageIndex === 0
+                                            ? "Capi enfrenta os obstáculos da conspiração"
+                                            : "Capi navega pelos corredores da Câmara"
+                                        }
+                                    </p>
+                                </div>
+
+                                {/* Setas de navegação */}
+                                <button
+                                    onClick={prevFase3Image}
+                                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
+                                    aria-label="Imagem anterior"
+                                >
+                                    <ChevronLeft className="w-6 h-6" />
+                                </button>
+
+                                <button
+                                    onClick={nextFase3Image}
+                                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white p-2 rounded-full transition-all duration-200"
+                                    aria-label="Próxima imagem"
+                                >
+                                    <ChevronRight className="w-6 h-6" />
+                                </button>
+
+                                {/* Indicadores de posição */}
+                                <div className="absolute bottom-4 right-4 flex space-x-2">
+                                    {fase3Images.map((_, index) => (
+                                        <button
+                                            key={index}
+                                            onClick={() => setCurrentFase3ImageIndex(index)}
+                                            className={`w-3 h-3 rounded-full transition-all duration-200 ${index === currentFase3ImageIndex
+                                                ? 'bg-white'
+                                                : 'bg-white/50 hover:bg-white/70'
+                                                }`}
+                                            aria-label={`Ir para imagem ${index + 1}`}
+                                        />
+                                    ))}
+                                </div>
+
+                                {/* Contador de imagens */}
+                                <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
+                                    {currentFase3ImageIndex + 1} / {fase3Images.length}
+                                </div>
                             </div>
                             <div>
                                 <div className="flex items-center mb-4">
@@ -503,18 +605,191 @@ const Play = () => {
                                     </h2>
                                 </div>
                                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                                    Capi é descoberto pelos conspiradores e precisa fugir pelos corredores
-                                    do Congresso. Esta fase é repleta de ação, onde ele deve usar sua
-                                    inteligência e agilidade para escapar de seus perseguidores.
+                                    As portas do Plenário da Câmara estão fechadas por um grande cadeado simbólico,
+                                    representando as barreiras políticas e regimentais. Capi precisa navegar por um
+                                    labirinto de corredores que se abrem conforme ele acerta o caminho certo do processo
+                                    legislativo. É o momento de levar o Projeto de Lei para votação na Câmara dos Deputados, mas os atalhos
+                                    errados podem levá-lo a becos sem saída, representando arquivamentos ou manobras
+                                    de procrastinação. <strong>Dona Justina surge como mentora, guiando Capi através
+                                        da sabedoria jurídica e dos valores democráticos.</strong>
                                 </p>
                                 <div className="bg-white rounded-xl p-6 shadow-sm">
                                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Objetivos da Fase:</h3>
                                     <ul className="space-y-2 text-gray-700">
-                                        <li>• Fugir dos guardas corruptos</li>
-                                        <li>• Usar o ambiente a seu favor</li>
-                                        <li>• Encontrar rotas de escape</li>
-                                        <li>• Proteger as evidências coletadas</li>
+                                        <li>• <strong>Encontrar a sequência correta</strong> de encaminhamentos regimentais</li>
+                                        <li>• <strong>Passar pelas comissões</strong> e superar pedidos de vista</li>
+                                        <li>• <strong>Driblar obstruções</strong> e manobras de procrastinação</li>
+                                        <li>• <strong>Destravar os acessos</strong> para conduzir o PL até o Plenário</li>
+                                        <li>• <strong>Responder corretamente</strong> aos enigmas sobre processo legislativo</li>
                                     </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Aprendizado Cívico - Fase 3 */}
+                        <div className="mt-8">
+                            <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-3xl p-8 border-2 border-yellow-200">
+                                <div className="flex items-center mb-6">
+                                    <h2 className="text-2xl font-bold text-gray-900 mr-3">
+                                        Aprendizado Cívico (rapidinho)
+                                    </h2>
+                                    <span className="text-3xl">🎓⚡</span>
+                                </div>
+
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    {/* Processo Legislativo na Câmara - Parte 1 */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">🏛️</span>
+                                            Caminho do PL na Câmara
+                                        </h3>
+                                        <div className="space-y-3">
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-yellow-50">
+                                                <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-yellow-600">1</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Apresentação e numeração do PL</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-yellow-50">
+                                                <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-yellow-600">2</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Distribuição às comissões temáticas</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-yellow-50">
+                                                <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-yellow-600">3</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Análise de constitucionalidade e mérito</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-yellow-50">
+                                                <div className="w-8 h-8 bg-yellow-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-yellow-600">4</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Relatório e parecer das comissões</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Obstáculos e Manobras - Parte 2 */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">⚠️</span>
+                                            Obstáculos do Processo
+                                        </h3>
+                                        <div className="space-y-3">
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-red-50">
+                                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-red-600">A</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Pedidos de vista (até 2 sessões)</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-red-50">
+                                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-red-600">B</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Obstruções e manobras regimentais</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-red-50">
+                                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-red-600">C</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Arquivamento por falta de prazo</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-red-50">
+                                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-red-600">D</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Recursos e questionamentos</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Dona Justina e Valores - Parte 3 */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm md:col-span-2">
+                                        <div className="flex flex-col lg:flex-row gap-6 items-start">
+                                            {/* Imagem da Dona Justina */}
+                                            <div className="flex-shrink-0 mx-auto lg:mx-0">
+                                                <div className="w-32 h-32 rounded-xl overflow-hidden shadow-lg border-2 border-yellow-200">
+                                                    <img
+                                                        src={donaJustina}
+                                                        alt="Dona Justina - Mentora da Sabedoria Jurídica"
+                                                        className="w-full h-full object-cover"
+                                                    />
+                                                </div>
+                                                <p className="text-center text-sm text-gray-600 mt-2 font-medium">
+                                                    👩‍⚖️ Dona Justina
+                                                </p>
+                                            </div>
+
+                                            {/* Conteúdo dos Valores */}
+                                            <div className="flex-1">
+                                                <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                                    <span className="text-2xl mr-2">⚖️</span>
+                                                    Sabedoria e Valores
+                                                </h3>
+                                                <div className="grid md:grid-cols-2 gap-4">
+                                                    <div className="space-y-3">
+                                                        <div className="flex items-center space-x-3 p-3 rounded-lg bg-green-50">
+                                                            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                                <span className="text-lg">⚖️</span>
+                                                            </div>
+                                                            <div>
+                                                                <p className="font-medium text-gray-900 text-sm">Tradição Jurídica</p>
+                                                                <p className="text-gray-600 text-xs">Sabedoria do Judiciário</p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="flex items-center space-x-3 p-3 rounded-lg bg-blue-50">
+                                                            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                                <span className="text-lg">🏛️</span>
+                                                            </div>
+                                                            <div>
+                                                                <p className="font-medium text-gray-900 text-sm">Valores Democráticos</p>
+                                                                <p className="text-gray-600 text-xs">Compromisso com a sociedade</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="space-y-3">
+                                                        <div className="flex items-center space-x-3 p-3 rounded-lg bg-purple-50">
+                                                            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                                <span className="text-lg">👨‍👩‍👧‍👦</span>
+                                                            </div>
+                                                            <div>
+                                                                <p className="font-medium text-gray-900 text-sm">Valores Familiares</p>
+                                                                <p className="text-gray-600 text-xs">Tradição e responsabilidade</p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="flex items-center space-x-3 p-3 rounded-lg bg-orange-50">
+                                                            <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                                <span className="text-lg">🎯</span>
+                                                            </div>
+                                                            <div>
+                                                                <p className="font-medium text-gray-900 text-sm">Orientação Estratégica</p>
+                                                                <p className="text-gray-600 text-xs">Caminhos seguros e perigosos</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Resumo da Fase 3 */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm md:col-span-2">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">🔓</span>
+                                            Resumo: Destravando o Labirinto Legislativo
+                                        </h3>
+                                        <div className="bg-gradient-to-r from-yellow-50 to-orange-50 rounded-lg p-4 border-l-4 border-yellow-400">
+                                            <p className="text-gray-700 text-sm leading-relaxed">
+                                                <strong>Em resumo:</strong> A Fase 3 representa o desafio de navegar pelo complexo processo legislativo da Câmara dos Deputados.
+                                                Capi precisa encontrar a sequência correta de encaminhamentos, superar obstáculos como pedidos de vista e obstruções,
+                                                e contar com a orientação de Dona Justina para destravar o labirinto e levar o PL até o Plenário.
+                                                <strong> Cada decisão correta abre um caminho iluminado, enquanto erros ativam os Anti-Democratis!</strong>
+                                                Na próxima fase, Capi viajará pelo Túnel do Tempo para aprender com as Constituições do passado! 🕰️✨
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -535,17 +810,22 @@ const Play = () => {
                                     </h2>
                                 </div>
                                 <p className="text-lg text-gray-700 leading-relaxed mb-6">
-                                    Capi finalmente descobre a verdade por trás da conspiração. Ele encontra
-                                    documentos que revelam um plano para manipular o sistema democrático
-                                    brasileiro. Agora, ele deve decidir como agir.
+                                    Depois de destravar os corredores do Plenário, CapiSenador descobre que não está sozinho.
+                                    Conspiradores sombrios espalharam teorias da conspiração e fake news, tentando desviar o
+                                    verdadeiro sentido do Projeto de Lei. Para restaurar a confiança da democracia, Capi deve
+                                    atravessar o misterioso <strong>Túnel do Tempo do Senado Federal</strong>, onde ecos das
+                                    Constituições passadas revelam segredos da história. <strong>Presidenton, o bigodudo de
+                                        faixa presidencial, surge como aliado para explicar como as leis precisam da sanção
+                                        presidencial para virar realidade!</strong>
                                 </p>
                                 <div className="bg-white rounded-xl p-6 shadow-sm">
                                     <h3 className="text-xl font-semibold text-gray-900 mb-3">Objetivos da Fase:</h3>
                                     <ul className="space-y-2 text-gray-700">
-                                        <li>• Analisar os documentos encontrados</li>
-                                        <li>• Entender o alcance da conspiração</li>
-                                        <li>• Tomar decisões morais importantes</li>
-                                        <li>• Preparar-se para o confronto final</li>
+                                        <li>• <strong>Desviar de objetos distorcidos</strong> (jornais falsos, microfones bugados)</li>
+                                        <li>• <strong>Coletar Fragmentos Históricos</strong> das Constituições brasileiras</li>
+                                        <li>• <strong>Restaurar a linha temporal</strong> para impedir apagamento da memória política</li>
+                                        <li>• <strong>Colaborar com Presidenton</strong> para entender sanção presidencial</li>
+                                        <li>• <strong>Chegar ao Plenarinho</strong> e descobrir as origens do Senado</li>
                                     </ul>
                                 </div>
                             </div>
@@ -592,6 +872,174 @@ const Play = () => {
                                 {/* Contador de imagens */}
                                 <div className="absolute top-4 right-4 bg-black/50 text-white px-3 py-1 rounded-full text-sm">
                                     {currentImageIndex + 1} / {fase4Images.length}
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Aprendizado Cívico - Fase 4 */}
+                        <div className="mt-8">
+                            <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-3xl p-8 border-2 border-purple-200">
+                                <div className="flex items-center mb-6">
+                                    <h2 className="text-2xl font-bold text-gray-900 mr-3">
+                                        Aprendizado Cívico (rapidinho)
+                                    </h2>
+                                    <span className="text-3xl">🎓⚡</span>
+                                </div>
+
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    {/* Fake News e Conspirações - Parte 1 */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">⚠️</span>
+                                            Ameaças à Democracia
+                                        </h3>
+                                        <div className="space-y-3">
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-red-50">
+                                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-red-600">1</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Fake news distorcem a realidade</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-red-50">
+                                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-red-600">2</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Teorias conspiratórias confundem</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-red-50">
+                                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-red-600">3</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Mídia distorcida espalha mentiras</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-red-50">
+                                                <div className="w-8 h-8 bg-red-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-red-600">4</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Conspiradores atacam a democracia</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* História das Constituições - Parte 2 */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">📜</span>
+                                            Constituições Brasileiras
+                                        </h3>
+                                        <div className="space-y-3">
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">1824</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Primeira Constituição do Império</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">1891</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Primeira República</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">1988</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Constituição Cidadã atual</p>
+                                            </div>
+                                            <div className="flex items-center space-x-3 p-2 rounded-lg bg-blue-50">
+                                                <div className="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0">
+                                                    <span className="text-sm font-bold text-blue-600">+</span>
+                                                </div>
+                                                <p className="text-gray-700 text-sm">Evolução democrática contínua</p>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Presidenton e Sanção Presidencial - Parte 3 */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm md:col-span-2">
+                                        <div className="flex flex-col lg:flex-row gap-6 items-start">
+                                            {/* Imagem do Presidenton */}
+                                            <div className="flex-shrink-0 mx-auto lg:mx-0">
+                                                <div className="w-32 h-32 rounded-xl overflow-hidden shadow-lg border-2 border-purple-200">
+                                                    <img
+                                                        src={presidentonTunelImage}
+                                                        alt="Presidenton - O Bigodudo de Faixa Presidencial"
+                                                        className="w-full h-full object-cover"
+                                                    />
+                                                </div>
+                                                <p className="text-center text-sm text-gray-600 mt-2 font-medium">
+                                                    🏛️ Presidenton
+                                                </p>
+                                            </div>
+
+                                            {/* Conteúdo do Presidenton */}
+                                            <div className="flex-1">
+                                                <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                                    <span className="text-2xl mr-2">🏛️</span>
+                                                    Sanção Presidencial e Poderes
+                                                </h3>
+                                                <div className="grid md:grid-cols-2 gap-4">
+                                                    <div className="space-y-3">
+                                                        <div className="flex items-center space-x-3 p-3 rounded-lg bg-green-50">
+                                                            <div className="w-10 h-10 bg-green-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                                <span className="text-lg">✍️</span>
+                                                            </div>
+                                                            <div>
+                                                                <p className="font-medium text-gray-900 text-sm">Sanção Presidencial</p>
+                                                                <p className="text-gray-600 text-xs">Aprovação final das leis</p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="flex items-center space-x-3 p-3 rounded-lg bg-blue-50">
+                                                            <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                                <span className="text-lg">🗣️</span>
+                                                            </div>
+                                                            <div>
+                                                                <p className="font-medium text-gray-900 text-sm">Diálogo Democrático</p>
+                                                                <p className="text-gray-600 text-xs">Governo e Parlamento</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div className="space-y-3">
+                                                        <div className="flex items-center space-x-3 p-3 rounded-lg bg-purple-50">
+                                                            <div className="w-10 h-10 bg-purple-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                                <span className="text-lg">⚖️</span>
+                                                            </div>
+                                                            <div>
+                                                                <p className="font-medium text-gray-900 text-sm">Equilíbrio dos Poderes</p>
+                                                                <p className="text-gray-600 text-xs">Legislativo + Executivo + Judiciário</p>
+                                                            </div>
+                                                        </div>
+                                                        <div className="flex items-center space-x-3 p-3 rounded-lg bg-orange-50">
+                                                            <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                                                                <span className="text-lg">🎯</span>
+                                                            </div>
+                                                            <div>
+                                                                <p className="font-medium text-gray-900 text-sm">Linha Temporal</p>
+                                                                <p className="text-gray-600 text-xs">Proteção da memória política</p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    {/* Resumo da Fase 4 */}
+                                    <div className="bg-white rounded-xl p-6 shadow-sm md:col-span-2">
+                                        <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center">
+                                            <span className="text-2xl mr-2">🕰️</span>
+                                            Resumo: O Túnel do Tempo e a Revelação
+                                        </h3>
+                                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-lg p-4 border-l-4 border-purple-400">
+                                            <p className="text-gray-700 text-sm leading-relaxed">
+                                                <strong>Em resumo:</strong> A Fase 4 representa a jornada através do Túnel do Tempo do Senado Federal,
+                                                onde CapiSenador enfrenta fake news e conspirações que ameaçam a democracia. Com a ajuda de Presidenton,
+                                                ele coleta fragmentos das Constituições brasileiras e restaura a linha temporal.
+                                                <strong> Só conhecendo o passado é possível proteger o futuro da democracia!</strong>
+                                                Ao chegar ao Plenarinho, Capi descobre as origens do Senado e se prepara para a votação final! 🏛️✨
+                                            </p>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
