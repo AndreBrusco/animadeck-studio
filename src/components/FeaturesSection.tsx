@@ -1,6 +1,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
+import { Link } from "react-router-dom";
 import {
   Gamepad2,
   Palette,
@@ -143,9 +144,9 @@ const FeaturesSection = () => {
                     Junte-se a milhares de jogadores já aproveitando esta aventura política única!
                   </p>
                   <Button className="w-full gaming-gradient" asChild>
-                    <a href="/play">
+                    <Link to="/play">
                       Inicie Sua Jornada
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>

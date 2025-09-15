@@ -14,7 +14,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename={import.meta.env.PROD ? '/animadeck-studio' : '/'}>
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/play" element={<Play />} />

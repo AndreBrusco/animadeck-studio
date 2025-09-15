@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Menu, Gamepad2 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -43,10 +44,10 @@ const Header = () => {
           {/* Action Buttons */}
           <div className="flex items-center space-x-4">
             <Button size="sm" className="gaming-gradient" asChild>
-              <a href="/play">
+              <Link to="/play">
                 <Gamepad2 className="w-4 h-4 mr-2" />
                 Jogar Agora
-              </a>
+              </Link>
             </Button>
             <Button variant="outline" size="icon" className="md:hidden">
               <Menu className="w-4 h-4" />

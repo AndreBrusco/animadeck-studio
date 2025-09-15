@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Play, Download, Star, Gamepad2 } from "lucide-react";
+import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-game-banner2.jpg";
 
 const HeroSection = () => {
@@ -95,10 +96,10 @@ const HeroSection = () => {
           {/* Bottom Action Button */}
           <div className="mt-6 text-center">
             <Button size="lg" className="bg-white text-primary hover:bg-blue-50 text-xl px-10 py-4" asChild>
-              <a href="/play">
+              <Link to="/play">
                 <Gamepad2 className="w-6 h-6 mr-3" />
                 Jogar Agora
-              </a>
+              </Link>
             </Button>
           </div>
         </div>
