@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Menu, Gamepad2 } from "lucide-react";
 import { Link } from "react-router-dom";
+import { getAssetPath } from "@/utils/paths";
 
 const Header = () => {
   return (
@@ -11,7 +12,7 @@ const Header = () => {
           <div className="flex items-center space-x-3">
             <div className="w-12 h-12 rounded-lg overflow-hidden">
               <img
-                src="/run_capi.png"
+                src={getAssetPath("/run_capi.png")}
                 alt="Capi Senador Logo"
                 className="w-full h-full object-cover"
               />

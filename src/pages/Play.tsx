@@ -4,6 +4,7 @@ import { Badge } from "@/components/ui/badge";
 import { ArrowLeft, Play as PlayIcon, Download, Star, Gamepad2, Users, Trophy, Clock, ChevronLeft, ChevronRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import { useState } from "react";
+import { getAssetPath } from "@/utils/paths";
 import plenarioCadeado from "@/assets/plenario_cadeado.png";
 import presidentonTunel from "@/assets/Presidenton_tunel.png";
 import plenarinho from "@/assets/plenarinho.png";
@@ -55,7 +56,7 @@ const Play = () => {
                         <div className="flex items-center space-x-3">
                             <div className="w-12 h-12 rounded-lg overflow-hidden">
                                 <img
-                                    src="/run_capi.png"
+                                    src={getAssetPath("/run_capi.png")}
                                     alt="Capi Senador Logo"
                                     className="w-full h-full object-cover"
                                 />
@@ -151,7 +152,7 @@ const Play = () => {
                                     <div className="flex items-center space-x-4 p-3 rounded-lg bg-blue-50 hover:bg-blue-100 transition-colors">
                                         <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
                                             <img
-                                                src="/votos-escondidos.svg"
+                                                src={getAssetPath("/votos-escondidos.svg")}
                                                 alt="Votos escondidos"
                                                 className="w-12 h-12 object-contain"
                                             />
@@ -165,7 +166,7 @@ const Play = () => {
                                     <div className="flex items-center space-x-4 p-3 rounded-lg bg-red-50 hover:bg-red-100 transition-colors">
                                         <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
                                             <img
-                                                src="/dra-votania.svg"
+                                                src={getAssetPath("/dra-votania.svg")}
                                                 alt="Fraude urnas"
                                                 className="w-12 h-12 object-contain"
                                             />
@@ -179,7 +180,7 @@ const Play = () => {
                                     <div className="flex items-center space-x-4 p-3 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
                                         <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
                                             <img
-                                                src="/fraude-urnas.svg"
+                                                src={getAssetPath("/fraude-urnas.svg")}
                                                 alt="Dra. Votânia"
                                                 className="w-12 h-12 object-contain"
                                             />
@@ -1136,7 +1137,7 @@ const Play = () => {
                                     <div className="flex items-center space-x-4 p-3 rounded-lg bg-green-50 hover:bg-green-100 transition-colors">
                                         <div className="w-16 h-16 flex-shrink-0 rounded-lg overflow-hidden bg-white flex items-center justify-center shadow-sm">
                                             <img
-                                                src="/projeto-lei-asset.svg"
+                                                src={getAssetPath("/projeto-lei-asset.svg")}
                                                 alt="Projeto de Lei"
                                                 className="w-12 h-12 object-contain"
                                             />
@@ -1322,7 +1323,7 @@ const Play = () => {
                     <div className="flex items-center justify-center space-x-3 mb-4">
                         <div className="w-8 h-8 rounded-lg overflow-hidden">
                             <img
-                                src="/run_capi.png"
+                                src={getAssetPath("/run_capi.png")}
                                 alt="Capi Senador Logo"
                                 className="w-full h-full object-cover"
                             />

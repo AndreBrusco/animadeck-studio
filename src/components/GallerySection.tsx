@@ -4,6 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
 import { Play, Image as ImageIcon, Maximize2, ChevronLeft, ChevronRight } from "lucide-react";
 import { useState } from "react";
+import { getAssetPath } from "@/utils/paths";
 
 // Importar as imagens dos personagens
 import CapiSenador from "@/assets/CapiSenador.png";
@@ -419,14 +420,14 @@ const GallerySection = () => {
                     <video
                       className="w-full h-full object-cover"
                       controls
-                      poster="/trailer-poster.jpg"
+                      poster={getAssetPath("/trailer-poster.jpg")}
                       preload="metadata"
                     >
-                      <source src="/trailer.mp4" type="video/mp4" />
-                      <source src="/trailer.webm" type="video/webm" />
+                      <source src={getAssetPath("/trailer.mp4")} type="video/mp4" />
+                      <source src={getAssetPath("/trailer.webm")} type="video/webm" />
                       <p className="text-white text-center p-8">
                         Seu navegador não suporta vídeos HTML5.
-                        <a href="/trailer.mp4" className="text-blue-400 underline">Clique aqui para baixar o vídeo</a>
+                        <a href={getAssetPath("/trailer.mp4")} className="text-blue-400 underline">Clique aqui para baixar o vídeo</a>
                       </p>
                     </video>
                     <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent pointer-events-none"></div>
