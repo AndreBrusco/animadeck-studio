@@ -7,8 +7,10 @@
     "dev": "vite",
     "build": "vite build",
     "build:dev": "vite build --mode development",
+    "build:local": "vite build --base /",
     "lint": "eslint .",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "preview:local": "npm run build:local && vite preview"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.10.0",
