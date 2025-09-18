@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AnimaDeck Studio - Capi Senador</title>
+    <title>AnimaDeck Studio - Capi Senador | Jogar</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -19,7 +18,6 @@
             justify-content: center;
             align-items: center;
         }
-
         .container {
             max-width: 600px;
             padding: 40px;
@@ -27,17 +25,14 @@
             border-radius: 20px;
             backdrop-filter: blur(10px);
         }
-
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
-
         p {
             font-size: 1.2em;
             margin-bottom: 30px;
         }
-
         .btn {
             display: inline-block;
             padding: 15px 30px;
@@ -48,32 +43,21 @@
             font-weight: bold;
             transition: transform 0.3s ease;
         }
-
         .btn:hover {
             transform: translateY(-2px);
         }
     </style>
 </head>
-
 <body>
     <div class="container">
         <h1>🎮 AnimaDeck Studio</h1>
-        <p>Carregando o jogo Capi Senador...</p>
-        <a href="/animadeck-studio/" class="btn">Jogar Agora</a>
+        <p>Inicializando o jogo Capi Senador...</p>
+        <a href="/animadeck-studio/" class="btn">Voltar ao Início</a>
     </div>
-
+    
     <script>
-        // Redirecionar imediatamente para a URL correta
-        const currentPath = window.location.pathname;
-        
-        if (currentPath.includes('/play')) {
-            // Se está tentando acessar /play, redirecionar para /play
-            window.location.replace('/animadeck-studio/play');
-        } else {
-            // Caso contrário, redirecionar para a página principal
-            window.location.replace('/animadeck-studio/');
-        }
+        // Redirecionar para a página principal do SPA que carregará o React Router
+        window.location.replace('/animadeck-studio/');
     </script>
 </body>
-
 </html>
