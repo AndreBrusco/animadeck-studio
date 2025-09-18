@@ -63,16 +63,16 @@
     </div>
 
     <script>
-        // Redirecionar para a URL original que o usuário estava tentando acessar
-        setTimeout(() => {
-            // Se a URL contém /play, redirecionar para /play
-            if (window.location.pathname.includes('/play')) {
-                window.location.replace('/animadeck-studio/play');
-            } else {
-                // Caso contrário, redirecionar para a página principal
-                window.location.replace('/animadeck-studio/');
-            }
-        }, 2000);
+        // Redirecionar imediatamente para a URL correta
+        const currentPath = window.location.pathname;
+        
+        if (currentPath.includes('/play')) {
+            // Se está tentando acessar /play, redirecionar para /play
+            window.location.replace('/animadeck-studio/play');
+        } else {
+            // Caso contrário, redirecionar para a página principal
+            window.location.replace('/animadeck-studio/');
+        }
     </script>
 </body>
 
