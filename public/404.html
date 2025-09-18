@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -18,6 +19,7 @@
             justify-content: center;
             align-items: center;
         }
+
         .container {
             max-width: 600px;
             padding: 40px;
@@ -25,14 +27,17 @@
             border-radius: 20px;
             backdrop-filter: blur(10px);
         }
+
         h1 {
             font-size: 2.5em;
             margin-bottom: 20px;
         }
+
         p {
             font-size: 1.2em;
             margin-bottom: 30px;
         }
+
         .btn {
             display: inline-block;
             padding: 15px 30px;
@@ -43,23 +48,32 @@
             font-weight: bold;
             transition: transform 0.3s ease;
         }
+
         .btn:hover {
             transform: translateY(-2px);
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <h1>🎮 AnimaDeck Studio</h1>
         <p>Carregando o jogo Capi Senador...</p>
         <a href="/animadeck-studio/" class="btn">Jogar Agora</a>
     </div>
-    
+
     <script>
-        // Redirecionar para a página principal do SPA
+        // Redirecionar para a URL original que o usuário estava tentando acessar
         setTimeout(() => {
-            window.location.replace('/animadeck-studio/');
+            // Se a URL contém /play, redirecionar para /play
+            if (window.location.pathname.includes('/play')) {
+                window.location.replace('/animadeck-studio/play');
+            } else {
+                // Caso contrário, redirecionar para a página principal
+                window.location.replace('/animadeck-studio/');
+            }
         }, 2000);
     </script>
 </body>
+
 </html>
