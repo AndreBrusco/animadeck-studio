@@ -1241,22 +1241,25 @@ const Play = () => {
                         </div>
 
                         {/* Quadro Classificatório */}
-                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 mb-8 border-2 border-blue-200">
+                        <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-6 mb-8 border-2 border-amber-200">
                             <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
                                 🏆 Quadro Classificatório
                             </h3>
                             <div className="grid md:grid-cols-3 gap-4">
-                                <div className="bg-green-100 rounded-lg p-4 text-center border-2 border-green-300">
-                                    <div className="text-2xl font-bold text-green-800 mb-2">Até 150 pontos</div>
-                                    <div className="text-sm text-green-700 font-semibold">Aprovação de Projeto de Lei</div>
+                                <div className="bg-amber-100 rounded-lg p-4 text-center border-2 border-amber-300">
+                                    <div className="text-4xl mb-2">🥉</div>
+                                    <div className="text-lg font-bold text-amber-800 mb-1">Até 150 pontos</div>
+                                    <div className="text-sm text-amber-700 font-semibold">Aprovação de Projeto de Lei</div>
+                                </div>
+                                <div className="bg-gray-100 rounded-lg p-4 text-center border-2 border-gray-300">
+                                    <div className="text-4xl mb-2">🥈</div>
+                                    <div className="text-lg font-bold text-gray-800 mb-1">Acima de 150 pontos</div>
+                                    <div className="text-sm text-gray-700 font-semibold">Aprovação de Projeto de Lei Complementar</div>
                                 </div>
                                 <div className="bg-yellow-100 rounded-lg p-4 text-center border-2 border-yellow-300">
-                                    <div className="text-2xl font-bold text-yellow-800 mb-2">Acima de 150 pontos</div>
-                                    <div className="text-sm text-yellow-700 font-semibold">Aprovação de Projeto de Lei Complementar</div>
-                                </div>
-                                <div className="bg-red-100 rounded-lg p-4 text-center border-2 border-red-300">
-                                    <div className="text-2xl font-bold text-red-800 mb-2">Acima de 200 pontos</div>
-                                    <div className="text-sm text-red-700 font-semibold">Aprovação de Emenda à Constituição</div>
+                                    <div className="text-4xl mb-2">🥇</div>
+                                    <div className="text-lg font-bold text-yellow-800 mb-1">Acima de 200 pontos</div>
+                                    <div className="text-sm text-yellow-700 font-semibold">Aprovação de Emenda à Constituição</div>
                                 </div>
                             </div>
                         </div>
@@ -1418,6 +1421,176 @@ const Play = () => {
                                                 A votação transparente e democrática é o coração da nossa República!
                                                 <strong> Cada voto conta para o futuro do Brasil!</strong> 🇧🇷✨
                                             </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                {/* Fase 6 */}
+                <section className="mb-16">
+                    <div className="bg-gradient-to-r from-indigo-50 to-purple-50 rounded-3xl p-8 lg:p-12 border-4 border-indigo-200">
+                        {/* Título da Fase */}
+                        <div className="text-center mb-8">
+                            <div className="flex items-center justify-center mb-4">
+                                <Badge className="bg-indigo-900 text-white text-lg px-4 py-2 mr-4">
+                                    Fase 6
+                                </Badge>
+                                <h2 className="text-3xl font-bold text-gray-900">
+                                    A Revelação Final
+                                </h2>
+                            </div>
+                            <p className="text-lg text-gray-700 leading-relaxed max-w-4xl mx-auto">
+                                Capi e seus aliados finalmente descobre a origem de todas as ameaças: Hidratadura, a grande vilã por trás da conspiração.
+                                Anti-democrática, anti-social e inimiga da nação, ela surge invejosa e sombria, tomando o alto do Parlamento à meia-noite.
+                            </p>
+                        </div>
+
+                        {/* Resumo da Fase */}
+                        <div className="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-2xl p-6 mb-8 border-2 border-indigo-200">
+                            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                                📜 Resumo da Fase 6 – "A Revelação Final"
+                            </h3>
+                            <h4 className="text-lg font-semibold text-gray-900 mb-4 text-center">
+                                É nesse cenário grandioso que CapiSenador enfrenta sua maior batalha.
+                                Com coragem e determinação, ele luta pelo povo brasileiro para garantir uma nova ordem constitucional, marcada pela justiça, pela democracia e pela esperança.
+
+                                No topo iluminado do Parlamento, o espetáculo se revela: a luta épica entre herói e vilã, prometendo encantar e emocionar todos os jogadores nessa batalha final decisiva!
+                            </h4>
+                        </div>
+
+                        {/* Imagens da Fase */}
+                        <div className="grid md:grid-cols-2 gap-6 mb-8">
+                            <div className="bg-white rounded-xl p-4 shadow-lg border-2 border-indigo-100">
+                                <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
+                                    🗒️ O projeto que irá Salvar o Brasil: <strong>Alegria para todos!</strong>
+                                </h3>
+                                <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
+                                    <img
+                                        src={getAssetPath("/final_capi.png")}
+                                        alt="Capi Senador no Túnel do Tempo"
+                                        className="w-full h-full object-cover rounded-lg"
+                                    />
+                                </div>
+                            </div>
+
+                            <div className="bg-white rounded-xl p-4 shadow-lg border-2 border-indigo-100">
+                                <h3 className="text-lg font-semibold text-gray-900 mb-4 text-center">
+                                    🚀 A batalha Final: <strong>Capi vs Hidratadura</strong>
+                                </h3>
+                                <div className="relative w-full" style={{ aspectRatio: '16/9' }}>
+                                    <img
+                                        src={getAssetPath("/final_capi2.png")}
+                                        alt="Capi Senador e Presidenton"
+                                        className="w-full h-full object-cover rounded-lg"
+                                    />
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Aprendizado Cívico - Fase 6 */}
+                        <div className="mt-8">
+                            <div className="bg-gradient-to-r from-indigo-100 to-purple-100 rounded-3xl p-8 border-2 border-indigo-200">
+                                <div className="flex items-center mb-6">
+                                    <h2 className="text-2xl font-bold text-gray-900 mr-3">
+                                        Aprendizado Cívico (rapidinho)
+                                    </h2>
+                                    <span className="text-3xl">🎓⚡</span>
+                                </div>
+
+                                <div className="grid md:grid-cols-2 gap-6">
+                                    <div className="space-y-4">
+                                        <div className="bg-white rounded-lg p-4 shadow-sm">
+                                            <h3 className="font-bold text-gray-900 mb-2">🛡️ Defesa da Democracia:</h3>
+                                            <p className="text-sm text-gray-700">
+                                                A democracia é frágil e precisa ser defendida contra ameaças autoritárias e desinformação.
+                                                Valores democráticos são construídos com participação popular e respeito às instituições.
+                                            </p>
+                                        </div>
+
+                                        <div className="bg-white rounded-lg p-4 shadow-sm">
+                                            <h3 className="font-bold text-gray-900 mb-2">🏛️ Função do Parlamento:</h3>
+                                            <p className="text-sm text-gray-700">
+                                                O Congresso é o guardião da Constituição e da ordem democrática.
+                                                Leis legítimas nascem do debate público e da representação popular.
+                                            </p>
+                                        </div>
+
+                                        <div className="bg-white rounded-lg p-4 shadow-sm">
+                                            <h3 className="font-bold text-gray-900 mb-2">📜 Importância da Constituição:</h3>
+                                            <p className="text-sm text-gray-700">
+                                                A Constituição garante direitos fundamentais e as "cláusulas pétreas" que protegem
+                                                a cidadania. Sem Constituição não há democracia plena.
+                                            </p>
+                                        </div>
+                                    </div>
+
+                                    <div className="space-y-4">
+                                        <div className="bg-white rounded-lg p-4 shadow-sm">
+                                            <h3 className="font-bold text-gray-900 mb-2">⚖️ Valores Sociais:</h3>
+                                            <p className="text-sm text-gray-700">
+                                                Luta entre exclusão (Hidratadura) e inclusão (Capi). Cada vitória representa
+                                                conquistas cidadãs e defesa dos direitos sociais.
+                                            </p>
+                                        </div>
+
+                                        <div className="bg-white rounded-lg p-4 shadow-sm">
+                                            <h3 className="font-bold text-gray-900 mb-2">🤝 Participação Popular:</h3>
+                                            <p className="text-sm text-gray-700">
+                                                O herói não luta sozinho: sua força vem do apoio popular e do espírito coletivo.
+                                                A democracia se faz em conjunto, com aliados como Presidenton, Dra. Votânia e Dona Justina.
+                                            </p>
+                                        </div>
+
+                                        <div className="bg-white rounded-lg p-4 shadow-sm">
+                                            <h3 className="font-bold text-gray-900 mb-2">🗳️ Cidadania Ativa:</h3>
+                                            <p className="text-sm text-gray-700">
+                                                Cada cidadão tem o poder de transformar a realidade através da participação política,
+                                                do voto consciente e da defesa dos valores democráticos.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Seção de Votação */}
+                        <div className="mt-8">
+                            <div className="bg-gradient-to-r from-green-100 to-emerald-100 rounded-3xl p-8 border-2 border-green-200">
+                                <div className="text-center">
+                                    <div className="mb-6">
+                                        <img
+                                            src={getAssetPath("/aproved.png")}
+                                            alt="Capi Senador Aprovado"
+                                            className="mx-auto max-w-md w-full h-auto rounded-lg shadow-lg"
+                                        />
+                                    </div>
+
+                                    <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                                        🗳️ Gostou do jogo? Vote em Capi Senador!
+                                    </h2>
+
+                                    <p className="text-lg text-gray-700 mb-6 max-w-2xl mx-auto">
+                                        Capi Senador demonstrou coragem, sabedoria e dedicação ao processo democrático.
+                                        Ele merece seu voto para continuar lutando por um Brasil melhor!
+                                    </p>
+
+                                    <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                                        <div className="bg-white rounded-lg p-4 shadow-sm border-2 border-green-300">
+                                            <div className="text-2xl font-bold text-green-800 mb-2">✅ Aprovado!</div>
+                                            <div className="text-sm text-green-700">Capi Senador tem o seu apoio</div>
+                                        </div>
+
+                                        <div className="bg-white rounded-lg p-4 shadow-sm border-2 border-blue-300">
+                                            <div className="text-2xl font-bold text-blue-800 mb-2">🗳️ Vote!</div>
+                                            <div className="text-sm text-blue-700">Exercite sua cidadania</div>
+                                        </div>
+
+                                        <div className="bg-white rounded-lg p-4 shadow-sm border-2 border-purple-300">
+                                            <div className="text-2xl font-bold text-purple-800 mb-2">🇧🇷 Brasil!</div>
+                                            <div className="text-sm text-purple-700">Por um país melhor</div>
                                         </div>
                                     </div>
                                 </div>
