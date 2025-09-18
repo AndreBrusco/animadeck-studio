@@ -1,73 +1,128 @@
-# Welcome to your Lovable project
+# 🎮 AnimaDeck Studio - Capi Senador
 
-## Project info
+**Versão:** v1.1
 
-**URL**: https://lovable.dev/projects/e324d96f-9ca6-4a36-ade0-bb0132c6186e
+## 📖 Sobre o Projeto
 
-## How can I edit this code?
+O **AnimaDeck Studio** é um jogo educativo interativo que ensina sobre o processo legislativo brasileiro através da jornada épica do **Capi Senador**. O projeto combina entretenimento e educação cívica, apresentando de forma lúdica e envolvente os conceitos fundamentais da democracia e do funcionamento do Congresso Nacional.
 
-There are several ways of editing your application.
+## 🎯 Objetivo
 
-**Use Lovable**
+O jogo tem como objetivo principal educar cidadãos, especialmente jovens, sobre:
+- O processo legislativo brasileiro
+- A importância da participação política
+- A defesa da democracia e dos valores constitucionais
+- O combate à desinformação
+- A função do Parlamento e das instituições democráticas
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e324d96f-9ca6-4a36-ade0-bb0132c6186e) and start prompting.
+## 🎮 Jogabilidade
 
-Changes made via Lovable will be committed automatically to this repo.
+### **6 Fases Épicas:**
 
-**Use your preferred IDE**
+1. **🏃 A Caminhada do Capi Senador** - Coleta de votos e apoio popular
+2. **🏛️ A Subida da Rampa do Senado** - Primeiros passos no legislativo
+3. **🔍 A Investigação no Labirinto da Câmara** - Descoberta de irregularidades
+4. **⚖️ O Julgamento no Plenário** - Processo de votação e debate
+5. **🗳️ A Votação Mais Importante do Brasil** - Decisão final sobre projetos de lei
+6. **⏰ A Revelação Final** - Restauração da linha temporal e luta contra desinformação
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+### **Personagens:**
+- **Capi Senador** - O protagonista heróico
+- **Presidenton** - Aliado que mostra como leis viram ações de governo
+- **Dra. Votânia** - Personagem que representa a importância do voto
+- **Dona Justina** - Símbolo da justiça social
+- **Hidratadura** - Vilã que representa ameaças à democracia
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🎓 Aprendizado Cívico
 
-Follow these steps:
+Cada fase inclui seções de **Aprendizado Cívico** que abordam:
+- Defesa da democracia e valores constitucionais
+- Função do Parlamento e processo legislativo
+- Importância da Constituição e cláusulas pétreas
+- Valores sociais e inclusão
+- Participação popular e cidadania ativa
+- Combate à desinformação
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 🛠️ Tecnologias Utilizadas
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+- **Vite** - Build tool e servidor de desenvolvimento
+- **TypeScript** - Linguagem de programação
+- **React** - Biblioteca para interface de usuário
+- **shadcn/ui** - Componentes de UI
+- **Tailwind CSS** - Framework de CSS
+- **React Router** - Roteamento
+- **GitHub Pages** - Hospedagem
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🚀 Como Executar
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
+### **Desenvolvimento:**
+```bash
 npm run dev
 ```
 
-**Edit a file directly in GitHub**
+### **Preview:**
+```bash
+npm run preview:local
+```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### **Build de Produção:**
+```bash
+npm run build
+```
 
-**Use GitHub Codespaces**
+## 🌐 Deploy
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+O projeto está hospedado no GitHub Pages:
+- **URL:** https://andrebrusco.github.io/animadeck-studio/
+- **Deploy automático** via GitHub Actions
 
-## What technologies are used for this project?
+## 📱 Responsividade
 
-This project is built with:
+O jogo é totalmente responsivo e funciona em:
+- 💻 Desktop
+- 📱 Tablets
+- 📱 Smartphones
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## 🎨 Design
 
-## How can I deploy this project?
+- **Interface moderna** e intuitiva
+- **Cores vibrantes** que representam cada fase
+- **Animações suaves** e transições
+- **Layout responsivo** para todos os dispositivos
+- **Tipografia clara** e legível
 
-Simply open [Lovable](https://lovable.dev/projects/e324d96f-9ca6-4a36-ade0-bb0132c6186e) and click on Share -> Publish.
+## 🏆 Sistema de Classificação
 
-## Can I connect a custom domain to my Lovable project?
+### **Fase 1 - Tempos de Coleta:**
+- 🥉 > 2 minutos → Senador Suplente
+- 🥈 < 1:30 min → Senado Titular
+- 🥇 ≤ 1 min → Presidente do Senado
 
-Yes, you can!
+### **Fase 5 - Pontuação:**
+- 🥉 Até 150 pontos → Aprovação de Projeto de Lei
+- 🥈 Acima de 150 pontos → Aprovação de Projeto de Lei Complementar
+- 🥇 Acima de 200 pontos → Aprovação de Emenda à Constituição
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+## 📚 Hierarquia das Normas
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+O jogo ensina sobre a hierarquia das normas jurídicas brasileiras:
+1. Constituição Federal
+2. Emendas Constitucionais
+3. Leis Complementares
+4. Leis Ordinárias
+5. Medidas Provisórias
+6. Decretos Legislativos e Resoluções
+7. Decretos Executivos
+8. Portarias, Instruções Normativas, etc.
+
+## 🤝 Contribuição
+
+Este é um projeto educacional que visa promover a cidadania e o conhecimento sobre o processo democrático brasileiro. Contribuições são bem-vindas para melhorar a experiência educativa.
+
+## 📄 Licença
+
+Projeto educacional para fins de promoção da cidadania e educação política.
+
+---
+
+**Desenvolvido com ❤️ para a educação cívica brasileira**
