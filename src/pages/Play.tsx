@@ -275,6 +275,30 @@ const Play = () => {
                             </div>
                         </div>
 
+                        {/* Quadrinho de Tempos de Coleta */}
+                        <div className="bg-gradient-to-r from-amber-50 to-yellow-50 rounded-2xl p-6 mb-8 border-2 border-amber-200">
+                            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                                ⏱️ Tempo de Coleta dos Votos
+                            </h3>
+                            <div className="grid md:grid-cols-3 gap-4">
+                                <div className="bg-amber-100 rounded-lg p-4 text-center border-2 border-amber-300">
+                                    <div className="text-4xl mb-2">🥉</div>
+                                    <div className="text-lg font-bold text-amber-800 mb-1">&gt; 2 minutos</div>
+                                    <div className="text-sm text-amber-700 font-semibold">Senador Suplente</div>
+                                </div>
+                                <div className="bg-gray-100 rounded-lg p-4 text-center border-2 border-gray-300">
+                                    <div className="text-4xl mb-2">🥈</div>
+                                    <div className="text-lg font-bold text-gray-800 mb-1">&lt; 1:30 min</div>
+                                    <div className="text-sm text-gray-700 font-semibold">Senado Titular</div>
+                                </div>
+                                <div className="bg-yellow-100 rounded-lg p-4 text-center border-2 border-yellow-300">
+                                    <div className="text-4xl mb-2">🥇</div>
+                                    <div className="text-lg font-bold text-yellow-800 mb-1">≤ 1 min</div>
+                                    <div className="text-sm text-yellow-700 font-semibold">Presidente do Senado</div>
+                                </div>
+                            </div>
+                        </div>
+
                         {/* Aprendizado Cívico */}
                         <div className="mt-8">
                             <div className="bg-gradient-to-r from-yellow-50 to-amber-50 rounded-3xl p-8 border-2 border-yellow-200">
@@ -1214,6 +1238,92 @@ const Play = () => {
                                 allowFullScreen
                                 className="rounded-lg"
                             ></iframe>
+                        </div>
+
+                        {/* Quadro Classificatório */}
+                        <div className="bg-gradient-to-r from-blue-50 to-indigo-50 rounded-2xl p-6 mb-8 border-2 border-blue-200">
+                            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                                🏆 Quadro Classificatório
+                            </h3>
+                            <div className="grid md:grid-cols-3 gap-4">
+                                <div className="bg-green-100 rounded-lg p-4 text-center border-2 border-green-300">
+                                    <div className="text-2xl font-bold text-green-800 mb-2">Até 150 pontos</div>
+                                    <div className="text-sm text-green-700 font-semibold">Aprovação de Projeto de Lei</div>
+                                </div>
+                                <div className="bg-yellow-100 rounded-lg p-4 text-center border-2 border-yellow-300">
+                                    <div className="text-2xl font-bold text-yellow-800 mb-2">Acima de 150 pontos</div>
+                                    <div className="text-sm text-yellow-700 font-semibold">Aprovação de Projeto de Lei Complementar</div>
+                                </div>
+                                <div className="bg-red-100 rounded-lg p-4 text-center border-2 border-red-300">
+                                    <div className="text-2xl font-bold text-red-800 mb-2">Acima de 200 pontos</div>
+                                    <div className="text-sm text-red-700 font-semibold">Aprovação de Emenda à Constituição</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        {/* Hierarquia das Normas */}
+                        <div className="bg-gradient-to-r from-purple-50 to-pink-50 rounded-2xl p-6 mb-8 border-2 border-purple-200">
+                            <h3 className="text-xl font-bold text-gray-900 mb-4 text-center">
+                                📚 Hierarquia das Normas Jurídicas
+                            </h3>
+                            <div className="space-y-3">
+                                <div className="flex items-center bg-white rounded-lg p-3 shadow-sm border-l-4 border-red-500">
+                                    <span className="text-2xl mr-3">1️⃣</span>
+                                    <div>
+                                        <div className="font-bold text-gray-900">Constituição Federal</div>
+                                        <div className="text-sm text-gray-600">Lei fundamental do país</div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center bg-white rounded-lg p-3 shadow-sm border-l-4 border-orange-500">
+                                    <span className="text-2xl mr-3">2️⃣</span>
+                                    <div>
+                                        <div className="font-bold text-gray-900">Emendas Constitucionais</div>
+                                        <div className="text-sm text-gray-600">Modificações à Constituição</div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center bg-white rounded-lg p-3 shadow-sm border-l-4 border-yellow-500">
+                                    <span className="text-2xl mr-3">3️⃣</span>
+                                    <div>
+                                        <div className="font-bold text-gray-900">Leis Complementares</div>
+                                        <div className="text-sm text-gray-600">Complementam a Constituição</div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center bg-white rounded-lg p-3 shadow-sm border-l-4 border-green-500">
+                                    <span className="text-2xl mr-3">4️⃣</span>
+                                    <div>
+                                        <div className="font-bold text-gray-900">Leis Ordinárias</div>
+                                        <div className="text-sm text-gray-600">Leis gerais do país</div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center bg-white rounded-lg p-3 shadow-sm border-l-4 border-blue-500">
+                                    <span className="text-2xl mr-3">5️⃣</span>
+                                    <div>
+                                        <div className="font-bold text-gray-900">Medidas Provisórias</div>
+                                        <div className="text-sm text-gray-600">Ato do Presidente com força de lei</div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center bg-white rounded-lg p-3 shadow-sm border-l-4 border-indigo-500">
+                                    <span className="text-2xl mr-3">6️⃣</span>
+                                    <div>
+                                        <div className="font-bold text-gray-900">Decretos Legislativos e Resoluções</div>
+                                        <div className="text-sm text-gray-600">Atos do Congresso Nacional</div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center bg-white rounded-lg p-3 shadow-sm border-l-4 border-purple-500">
+                                    <span className="text-2xl mr-3">7️⃣</span>
+                                    <div>
+                                        <div className="font-bold text-gray-900">Decretos Executivos</div>
+                                        <div className="text-sm text-gray-600">Atos do Presidente da República</div>
+                                    </div>
+                                </div>
+                                <div className="flex items-center bg-white rounded-lg p-3 shadow-sm border-l-4 border-gray-500">
+                                    <span className="text-2xl mr-3">8️⃣</span>
+                                    <div>
+                                        <div className="font-bold text-gray-900">Portarias, Instruções Normativas, etc.</div>
+                                        <div className="text-sm text-gray-600">Atos administrativos</div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         {/* Aprendizado Cívico - Fase 5 */}
