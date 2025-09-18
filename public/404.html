@@ -1,15 +1,27 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>404 - Página não encontrada | AnimaDeck Studio</title>
     <script>
-        // Redirecionar para a página principal do SPA
-        window.location.replace('/animadeck-studio/');
+        // Verificar se é uma rota válida do SPA
+        const currentPath = window.location.pathname;
+        const validRoutes = ['/animadeck-studio/', '/animadeck-studio/play'];
+        
+        // Se for uma rota válida, redirecionar para ela
+        if (validRoutes.includes(currentPath)) {
+            window.location.replace(currentPath);
+        } else {
+            // Se não for uma rota válida, redirecionar para a página principal
+            window.location.replace('/animadeck-studio/');
+        }
     </script>
 </head>
+
 <body>
     <p>Redirecionando...</p>
 </body>
+
 </html>
